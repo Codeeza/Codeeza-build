@@ -10,34 +10,34 @@ const Footer = () => {
           <h3 className="font-bold mb-4 text-white">FOLLOW US</h3>
           <ul>
             <li className="mb-2 flex items-center">
-              <FaInstagram className="icons instagram text-white" />
+              <FaInstagram className="icons instagram text-white hover:text-gray-500" />
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-2"
+                className="px-2 hover:text-red-600"
               >
                 Instagram
               </a>
             </li>
             <li className="mb-2 flex items-center">
-              <FaFacebook className="icons facebook text-white" />
+              <FaFacebook className="icons facebook text-white hover:text-gray-500" />
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-2"
+                className="px-2 hover:text-red-600"
               >
                 Facebook
               </a>
             </li>
             <li className="mb-2 flex items-center">
-              <FaYoutube className="icons youtube text-white" />
+              <FaYoutube className="icons youtube text-white hover:text-gray-500" />
               <a
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-2"
+                className="px-2 hover:text-red-600"
               >
                 Youtube
               </a>
@@ -47,22 +47,22 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-4 text-white">INFORMATION</h3>
           <ul>
-            <li className="mb-2">
+            <li className="mb-2 hover:text-red-600">
               <a href="#about">About</a>
             </li>
-            <li className="mb-2">
+            <li className="mb-2 hover:text-red-600">
               <a href="#help">Help</a>
             </li>
-            <li className="mb-2">
+            <li className="mb-2 hover:text-red-600">
               <a href="#contact">Contact Us</a>
             </li>
-            <li className="mb-2">
+            <li className="mb-2 hover:text-red-600">
               <a href="#custom-orders">Custom Orders</a>
             </li>
-            <li className="mb-2">
+            <li className="mb-2 hover:text-red-600">
               <a href="#info-act">Information Act</a>
             </li>
-            <li className="mb-2">
+            <li className="mb-2 hover:text-red-600">
               <a href="#terms">Terms & Conditions</a>
             </li>
           </ul>

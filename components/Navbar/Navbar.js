@@ -46,12 +46,15 @@ const Navbar = () => {
             </span>
           </Link>
           {/* Mobile Phone login */}
-          <Link href={"/Login"} className="font-bold md:hidden lg:hidden ">
+          <Link
+            href={"/Login"}
+            className="font-bold md:hidden lg:hidden hover:text-gray-500"
+          >
             Login
           </Link>
 
           <div className="hidden md:flex items-center space-x-20 ml-5">
-            <Link href="/Help">
+            <Link href="/Help" className="hover:text-gray-500">
               <span>Help</span>
             </Link>
             <div className="md:flex md:flex-nowrap">
@@ -64,13 +67,13 @@ const Navbar = () => {
                 SEARCH
               </button>
             </div>
-            <Link href="/Login">
+            <Link href="/Login" className="hover:text-gray-500">
               <span>Login</span>
             </Link>
             <div>
               <RxDividerVertical />
             </div>
-            <Link href="Register">
+            <Link href="Register" className="hover:text-gray-500">
               <span>Register</span>
             </Link>
           </div>

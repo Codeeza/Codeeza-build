@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Hero from "@/app/Navbar/Hero/page";
+import Hero from "@/components/Navbar/Hero/page";
 import "./globals.css";
 
 export default function Home() {
