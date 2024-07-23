@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "../../app/globals.css";
 import React from "react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
@@ -48,22 +49,22 @@ const Footer = () => {
           <h3 className="font-bold mb-4 text-white">INFORMATION</h3>
           <ul>
             <li className="mb-2 hover:text-red-600">
-              <a href="#about">About</a>
+              <Link href="/about">About</Link>
             </li>
             <li className="mb-2 hover:text-red-600">
-              <a href="#help">Help</a>
+              <Link href="/help">Help</Link>
             </li>
             <li className="mb-2 hover:text-red-600">
-              <a href="#contact">Contact Us</a>
+              <Link href="/contact">Contact Us</Link>
             </li>
             <li className="mb-2 hover:text-red-600">
-              <a href="#custom-orders">Custom Orders</a>
+              <Link href="/custom-orders">Custom Orders</Link>
             </li>
             <li className="mb-2 hover:text-red-600">
-              <a href="#info-act">Information Act</a>
+              <Link href="/info-act">Information Act</Link>
             </li>
             <li className="mb-2 hover:text-red-600">
-              <a href="#terms">Terms & Conditions</a>
+              <Link href="/terms-conditions">Terms & Conditions</Link>
             </li>
           </ul>
         </div>
