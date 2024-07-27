@@ -141,6 +141,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* Mobile bottom Nav */}
+      {/* just a test */}
       <div className="md:hidden fixed inset-x-0 bottom-0 bg-white shadow-xl shadow-gray-400 border-t-2 border-t-gray-400 border-2 ml-5 mr-5 z-10">
         <div className="flex justify-around text-gray-500 m-auto">
           <Link
