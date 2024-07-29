@@ -125,7 +125,7 @@ const Page = () => {
       <h1 className="text-2xl font-bold text-center text-red-600 mb-6 mt-5">
         SEND US A MESSAGE
       </h1>
-      <div className="max-w-[840px] mx-auto mt-3 mb-10 p-5 bg-gray-100  rounded ">
+      <div className="max-w-[840px] mx-auto mt-3 mb-10 p-5 bg-gray-100 rounded ">
         <form onSubmit={handleSubmit}>
           <div className="mb-4 mt-4 flex-col md:flex-row flex items-center justify-center">
             <label className="block  text-gray-500 w-full text-sm mt-4 md:mt-0">
@@ -266,7 +266,7 @@ const Page = () => {
                           <option value="Payment">Payment</option>
                           <option value="Return">Return</option>
                           <option value="I can't login account">
-                            I cant login account
+                            I can’t login account
                           </option>
                         </select>
                       </div>
