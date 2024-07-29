@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Hero from "./navbar/Hero/page";
+import BestSeller from "../components/BestSeller/BestSeller.js"
+import Hero from "./Navbar/Hero/page.js";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <main>
         {" "}
         <Hero />
+        <BestSeller />
       </main>
     </>
   );
