@@ -8,7 +8,7 @@ const BestSeller = () => {
   return (
     <section className="max-container max-sm:mt-12">
       <div className="flex flex-col justify-start gap-2">
-        <h2 className="text-3xl sm:font-medium sm:text-2xl md:text-3xl lg:text-3xl  text-center text-red-600 font-semibold">
+        <h2 className="text-3xl sm:text-2xl md:text-3xl lg:text-3xl  text-center text-red-600 font-semibold">
           BEST SELLERS
         </h2>
       </div>
