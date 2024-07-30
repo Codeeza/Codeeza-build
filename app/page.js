@@ -5,7 +5,7 @@ import HowToRegister from "@/components/Register/HowToRegister";
 import BestSeller from "@/components/BestSeller/BestSeller";
 export default function Home() {
   return (
-    <>
+    <div>
       <Head>
         <title>Home Page</title>
       </Head>
@@ -15,6 +15,6 @@ export default function Home() {
         <BestSeller />
         <HowToRegister />
       </main>
-    </>
+    </div>
   );
 }
