@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="bg-black text-white ">
-        <div className="flex items-center justify-center text-xs mx-auto z-10 md:flex w-full py-4 px-8">
+        <div className="flex items-center justify-center font-bold text-xs mx-auto z-10 md:flex w-full py-4 px-8">
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
               <svg
@@ -47,7 +47,7 @@ const Navbar = () => {
           </Link>
           {/* Mobile Phone login */}
           <Link
-            href={"/Login"}
+            href={"/login"}
             className="font-bold md:hidden lg:hidden hover:text-gray-500"
           >
             Login
@@ -67,13 +67,13 @@ const Navbar = () => {
                 SEARCH
               </button>
             </div>
-            <Link href="/Login" className="hover:text-gray-500">
+            <Link href="/login" className="hover:text-gray-500">
               <span>Login</span>
             </Link>
             <div>
               <RxDividerVertical />
             </div>
-            <Link href="Register" className="hover:text-gray-500">
+            <Link href="/register" className="hover:text-gray-500">
               <span>Register</span>
             </Link>
           </div>
@@ -85,44 +85,44 @@ const Navbar = () => {
         <div className="md:hidden bg-white text-black shadow-xl z-10">
           <ul>
             <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
+              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
               onClick={() => handleNavigation("/collection/headwear")}
             >
               Headwear Collection
             </li>
             <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
+              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
               onClick={() => handleNavigation("/collection/apparel")}
             >
               Apparel Collection
             </li>
             <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
+              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
               onClick={() => handleNavigation("/collections")}
             >
               All Collections
             </li>
             <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
+              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
               onClick={() => handleNavigation("/catalogue")}
             >
               Catalogue
             </li>
             <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
+              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
               onClick={() => handleNavigation("/clearance")}
             >
               CLEARANCE
             </li>
             <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
+              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
               onClick={() => handleNavigation("https://captivity.co.za/faqs/")}
             >
               Help
             </li>
 
             <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
+              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
               onClick={() => handleNavigation("/register")}
             >
               Register
