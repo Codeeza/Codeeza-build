@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Hero from "@/components/Navbar/Hero/page";
 import "./globals.css";
-
+import HowToRegister from "@/components/Register/HowToRegister";
+import BestSeller from "@/components/BestSeller/BestSeller";
 export default function Home() {
   return (
     <>
@@ -11,6 +12,8 @@ export default function Home() {
       <main>
         {" "}
         <Hero />
+        <BestSeller />
+        <HowToRegister />
       </main>
     </>
   );

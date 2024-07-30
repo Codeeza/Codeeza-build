@@ -3,8 +3,8 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Categories = () => {
   return (
-    <div className="bg-slate-100">
-      <div className="flex items-center w-full text-xs justify-center gap-5">
+    <div className="bg-gray-100">
+      <div className="flex items-center w-full text-sm font-bold justify-center gap-5">
         <div className="hidden md:flex items-center space-x-8 px-20 md:px-20 ">
           <div className="relative group ">
             <button className="focus:outline-none px-10 py-2 items-center flex text-gray-600 hover:text-gray-400">
