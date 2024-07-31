@@ -14,7 +14,7 @@ const HowToRegister = () => {
           items. Should you fall into either of these categories and would like
           to register as a vendor?
         </p>
-        <Link>
+        <Link href="/register">
           <button className="mt-6 bg-red-600 text-white py-2 px-4 rounded">
             Register Here
           </button>
@@ -42,7 +42,7 @@ const HowToRegister = () => {
               The FWRD Brand is distributed via promotional companies,
               advertising, event companies and resellers ONLY.
             </p>
-            <Link>
+            <Link href="https://fwrd.co.za/">
               <button className="mt-6 bg-red-600 text-white py-2 px-4 rounded">
                 Visit Site
               </button>
