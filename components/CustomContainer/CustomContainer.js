@@ -3,30 +3,32 @@ import Image from "next/image";
 
 const CustomContainer = () => {
   return (
-    <section className="bg-white">
-      <div className="flex justify-center mb-10 relative overflow-hidden group">
-        <Image
-          src="/ClassicTShirts.jpg"
-          alt="Classic T-Shirts"
-          width={900}
-          height={900}
-          className="object-cover w-full transform transition-transform duration-200 ease-in-out hover:scale-125"
+    <section className="bg-white mb-10 w-full">
+      <div className="flex w-full">
+        <div className="relative group flex-1 overflow-hidden h-[500px]">
+          <Image
+            src="/ClassicTShirts.jpg"
+            alt="Classic T-Shirts"
+            layout="fill"
+            objectFit="cover"
+            className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
-        <button className="absolute bottom-14 left transition-transform duration-300
-         ease-linear group-hover:scale-125 -translate-x-3/4 bg-orange-700 text-white px-7 py-3 rounded font-bold">
-          Classic T-Shirts
-        </button>
-        <Image
-          src="/CamperCap.jpg"
-          alt="Camper Caps"
-          width={900}
-          height={900}
-          className="object-cover w-full transform transition-transform duration-200 ease-in-out hover:scale-110"
+          <button className="absolute bottom-14 right-20 transition-transform duration-300 ease-in-out group-hover:translate-x-10 group-hover:scale-125 bg-red-700 text-white px-7 py-3 rounded font-bold">
+            Classic T-Shirts
+          </button>
+        </div>
+        <div className="relative group flex-1 overflow-hidden h-[500px]">
+          <Image
+            src="/CamperCap.jpg"
+            alt="Camper Cap"
+            layout="fill"
+            objectFit="cover"
+            className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
-        <button className="absolute bottom-14 right-0 transition-transform duration-300
-         ease-linear group-hover:scale-125 -translate-x-3/4 bg-orange-700 text-white px-7 py-3 rounded font-bold">
-          Camper Cap
-        </button>
+          <button className="absolute bottom-14 right-20 transition-transform duration-300 ease-in-out group-hover:translate-x-10 group-hover:scale-125 bg-red-700 text-white px-7 py-3 rounded font-bold">
+            Camper Cap
+          </button>
+        </div>
       </div>
     </section>
   );
