@@ -15,11 +15,6 @@ const Navbar = () => {
   return (
     <div>
       <nav className="bg-black text-white ">
-<<<<<<< HEAD
-        <div className="flex items-center justify-center font-bold text-xs mx-auto z-10 md:flex w-full py-4 px-8">
-          <div className="md:hidden">
-=======
->>>>>>> 9e8e47b (Create test)
         <div className="flex items-center justify-center text-xs mx-auto z-10 md:flex w-full py-6 px-8 m-auto">
           <div className="md:hidden absolute top-6 left-7">
             <button onClick={() => setIsOpen(!isOpen)}>
@@ -53,25 +48,11 @@ const Navbar = () => {
           {/* Mobile Phone login */}
           <Link
             href={"/login"}
-<<<<<<< HEAD
-            className="font-bold md:hidden lg:hidden hover:text-gray-500"
-          />
-          <Link
-            href={"/login"}
-=======
->>>>>>> 9e8e47b (Create test)
             className="font-bold md:hidden absolute top-6 right-7 text-lg lg:hidden hover:text-gray-300"
           >
             Login
           </Link>
 
-<<<<<<< HEAD
-          <div className="hidden md:flex items-center space-x-20 ml-5">
-            <Link href="/Help" className="hover:text-gray-500">
-              <span>Help</span>
-              </Link>
-=======
->>>>>>> 9e8e47b (Create test)
           <div className="hidden md:flex items-center space-x-20 ">
             <Link href="/help" className="hover:text-gray-300">
               <span className="ml-5">Help</span>
@@ -86,112 +67,59 @@ const Navbar = () => {
                 SEARCH
               </button>
             </div>
-<<<<<<< HEAD
-            <Link href="/login" className="hover:text-gray-500">
-              <span>Login</span>
-              </Link>
-=======
->>>>>>> 9e8e47b (Create test)
             <Link href="/login">
               <span className="hover:text-gray-300">Login</span>
             </Link>
             <div>
               <RxDividerVertical className="-mr-5" />
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link href="/register" className="hover:text-gray-500">
-              <span>Register</span>
-            </Link>
-          </div>
-        </div>
-        </div>
-      
-      </div>
-=======
-            <Link href="register">
-=======
             <Link href="/register">
->>>>>>> 4e34900 (	modified:   app/Login/page.js)
               <span className="hover:text-gray-300 -ml-16">Register</span>
             </Link>
           </div>
         </div>
       </nav>
->>>>>>> 9e8e47b (Create test)
 
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white text-black shadow-xl z-10">
           <ul>
             <li
-<<<<<<< HEAD
-              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
-=======
               className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
->>>>>>> 9e8e47b (Create test)
               onClick={() => handleNavigation("/collection/headwear")}
             >
               Headwear Collection
             </li>
             <li
-<<<<<<< HEAD
-              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
-=======
               className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
->>>>>>> 9e8e47b (Create test)
               onClick={() => handleNavigation("/collection/apparel")}
             >
               Apparel Collection
             </li>
             <li
-<<<<<<< HEAD
-              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
-=======
               className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
->>>>>>> 9e8e47b (Create test)
               onClick={() => handleNavigation("/collections")}
             >
               All Collections
             </li>
             <li
-<<<<<<< HEAD
-              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
-=======
               className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
->>>>>>> 9e8e47b (Create test)
               onClick={() => handleNavigation("/catalogue")}
             >
               Catalogue
             </li>
             <li
-<<<<<<< HEAD
-              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
-=======
               className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
->>>>>>> 9e8e47b (Create test)
               onClick={() => handleNavigation("/clearance")}
             >
               CLEARANCE
             </li>
-<<<<<<< HEAD
-            <li
-              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
-              onClick={() => handleNavigation("https://captivity.co.za/faqs/")}
-            >
-              Help
-            </li>
-
-            <li
-              className="px-4 py-2 font-bold hover:bg-gray-200 hover:text-red-500"
-=======
             <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
-              <Link href={"/help"}>Help</Link>
+              <Link href="/help">Help</Link>
             </li>
 
             <li
               className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
->>>>>>> 9e8e47b (Create test)
               onClick={() => handleNavigation("/register")}
             >
               Register
@@ -247,11 +175,6 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-    </nav>
-    </div>
-=======
->>>>>>> 9e8e47b (Create test)
   );
 };
 

@@ -11,17 +11,9 @@ import Link from 'next/link'
           We have a large offering of headwear and apparel and are distributors of a large selection of promotional items.
           Should you fall into either of these categories and would like to register as a vendor?
         </p>
-<<<<<<< HEAD
         <button className="mt-6 bg-red-600 text-white py-2 px-4 rounded">
           Register Here
         </button>
-=======
-        <Link href='/register'>
-        <button className="mt-6 bg-red-600 text-white py-2 px-4 rounded">
-        Register Here
-      </button>
-        </Link>
->>>>>>> 9e8e47b (Create test)
       </section>
 
       <section className="bg-white py-16">
@@ -42,18 +34,9 @@ import Link from 'next/link'
             <p className="mt-4 text-gray-600">
               The FWRD Brand is distributed via promotional companies, advertising, event companies and resellers ONLY.
             </p>
-<<<<<<< HEAD
             <button className="mt-6 bg-red-600 text-white py-2 px-4 rounded">
               Visit Site
             </button>
-=======
-            <Link href='https://fwrd.co.za/'>
-            <button className="mt-6 bg-red-600 text-white py-2 px-4 rounded">
-            Visit Site
-          </button>
-            </Link>
-
->>>>>>> 9e8e47b (Create test)
           </div>
         </div>
       </section>
