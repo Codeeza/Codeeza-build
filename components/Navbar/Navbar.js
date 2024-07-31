@@ -47,7 +47,7 @@ const Navbar = () => {
           </Link>
           {/* Mobile Phone login */}
           <Link
-            href={"/login"}
+            href="/Login"
             className="font-bold md:hidden absolute top-6 right-7 text-lg lg:hidden hover:text-gray-300"
           >
             Login
@@ -67,13 +67,13 @@ const Navbar = () => {
                 SEARCH
               </button>
             </div>
-            <Link href="/login">
+            <Link href="/Login">
               <span className="hover:text-gray-300">Login</span>
             </Link>
             <div>
               <RxDividerVertical className="-mr-5" />
             </div>
-            <Link href="/register">
+            <Link href="/Register">
               <span className="hover:text-gray-300 -ml-16">Register</span>
             </Link>
           </div>
