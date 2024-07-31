@@ -59,12 +59,12 @@ const Login = () => {
                 </button>
               </div>
               <div className="text-left">
-                <a
+                <Link
                   className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                   href="/lost-password"
                 >
                   Lost your password?
-                </a>
+                </Link>
               </div>
             </form>
           </div>

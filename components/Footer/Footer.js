@@ -110,9 +110,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="container mx-auto text-center">
-        <button className="bg-transparent border-2 border-slate-400 text-white hover:bg-red-700 hover:border-red-700 py-2 px-4">
-          OUR OFFICES
-        </button>
+      <Link href='https://captivity.co.za/contact/'>
+      <button className="bg-transparent border-2 border-slate-400 text-white hover:bg-red-700 hover:border-red-700 py-2 px-4">
+      OUR OFFICES
+    </button>
+      </Link>
+
       </div>
     </footer>
   );

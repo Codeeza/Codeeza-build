@@ -99,6 +99,7 @@ const Navbar = () => {
               <RxDividerVertical className="-mr-5" />
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link href="/register" className="hover:text-gray-500">
               <span>Register</span>
             </Link>
@@ -109,6 +110,9 @@ const Navbar = () => {
       </div>
 =======
             <Link href="register">
+=======
+            <Link href="/register">
+>>>>>>> 4e34900 (	modified:   app/Login/page.js)
               <span className="hover:text-gray-300 -ml-16">Register</span>
             </Link>
           </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import { FaRegWindowMinimize } from "react-icons/fa";
