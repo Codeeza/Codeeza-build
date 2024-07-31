@@ -14,10 +14,11 @@ const CustomContainer = () => {
             objectFit="cover"
             className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
-          <Link href="/classic-t-shirts"> {/* Link to the product page */}
-            <a className="absolute bottom-14 right-20 transition-transform duration-300 ease-in-out group-hover:translate-x-10 group-hover:scale-125 bg-red-700 text-white px-7 py-3 rounded font-bold">
-              Classic T-Shirts
-            </a>
+          <Link
+            href="/products/classic-t-shirts"
+            className="absolute bottom-14 right-20 transition-transform duration-300 ease-in-out group-hover:translate-x-10 group-hover:scale-125 bg-red-700 text-white px-7 py-3 rounded font-bold"
+          >
+            Classic T-Shirts
           </Link>
         </div>
         <div className="relative group flex-1 overflow-hidden h-[500px]">
@@ -28,10 +29,11 @@ const CustomContainer = () => {
             objectFit="cover"
             className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
-          <Link href="/camper-cap"> {/* Link to the product page */}
-            <a className="absolute bottom-14 right-20 transition-transform duration-300 ease-in-out group-hover:translate-x-10 group-hover:scale-125 bg-red-700 text-white px-7 py-3 rounded font-bold">
-              Camper Cap
-            </a>
+          <Link
+            href="/products/camper-cap"
+            className="absolute bottom-14 right-20 transition-transform duration-300 ease-in-out group-hover:translate-x-10 group-hover:scale-125 bg-red-700 text-white px-7 py-3 rounded font-bold"
+          >
+            Camper Cap
           </Link>
         </div>
       </div>
