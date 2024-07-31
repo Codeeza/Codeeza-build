@@ -54,7 +54,7 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-20 ">
-            <Link href="/help" className="hover:text-gray-300">
+            <Link href="/Help" className="hover:text-gray-300">
               <span className="ml-5">Help</span>
             </Link>
             <div className="md:flex md:flex-nowrap">
@@ -115,7 +115,7 @@ const Navbar = () => {
               CLEARANCE
             </li>
             <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
-              <Link href="/help">Help</Link>
+              <Link href="/Help">Help</Link>
             </li>
 
             <li

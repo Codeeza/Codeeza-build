@@ -2,6 +2,7 @@ import Head from "next/head";
 import "./globals.css";
 import HowToRegister from "@/components/Register/HowToRegister";
 import BestSeller from "@/components/BestSeller/BestSeller";
+import ProductSection from "@/components/ProductSection/ProductSection";
 export default function Home() {
   return (
     <div>
@@ -10,6 +11,7 @@ export default function Home() {
       </Head>
       <main>
         {" "}
+        <ProductSection />
         <BestSeller />
         <HowToRegister />
       </main>
