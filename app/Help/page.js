@@ -281,16 +281,16 @@ const Page = () => {
                             onChange={(e) => handleTextChange(item.id, e)}
                             placeholder="Type here..."
                           ></textarea>
-                          <button
-                            type="button"
-                            onClick={() => removeItem(item.id)}
-                            className="top-1 right-1 z-9 hover:text-red-600 border-2 text-gray-500 hover:bg-gray-100 pt-1 pb-1 pl-2 pr-2 rounded-full"
-                          >
-                            Remove item
-                          </button>
                         </div>
                       )}
                     </div>
+                    <button
+                      type="button"
+                      onClick={() => removeItem(item.id)}
+                      className="top-1 right-1 z-9 hover:text-red-600 border-2 text-gray-500 hover:bg-gray-100 pt-1 pb-1 pl-2 pr-2 rounded-full"
+                    >
+                      Remove item
+                    </button>
                   </div>
                 ))}
                 <button

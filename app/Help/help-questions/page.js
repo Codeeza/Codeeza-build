@@ -18,7 +18,7 @@ const Questions = () => {
   };
 
   return (
-    <div className="max-w-[840px] mx-auto mt-3 mb-10 p-5 bg-gray-100 rounded">
+    <div className="max-w-[840px] mx-auto mt-3 mb-10 p-5 text-gray-700 bg-gray-100 rounded">
       <h1 className="text-2xl text-gray-500 font-semibold text-center pb-4 mt-6 mb-6">
         What can we help you with?
       </h1>
@@ -53,7 +53,7 @@ const Questions = () => {
                   <br />
                   <br />
                   <Link
-                    href="#"
+                    href="mailto:info@captivity.co.za [undefined:info@captivity.co.za]"
                     className="text-red-500 font-bold hover:text-red-600"
                   >
                     Get a referral
@@ -97,9 +97,9 @@ const Questions = () => {
                   able to view stock availability & pricing.
                   <br />
                   <br />
-                  Complete the
+                  Complete the{" "}
                   <Link
-                    href="#"
+                    href="/register"
                     className="text-red-500 hover:text-red-600 font-bold"
                   >
                     registration form
@@ -112,9 +112,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -141,7 +145,7 @@ const Questions = () => {
                   <br />
                   <br />
                   <Link
-                    href="#"
+                    href="mailto:info@captivity.co.za [undefined:info@captivity.co.za]"
                     className="text-red-500 hover:text-red-600 font-bold"
                   >
                     Get a referral
@@ -154,9 +158,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -186,9 +194,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -211,7 +223,7 @@ const Questions = () => {
                 <div id="q5" className="bg-gray-200 p-4 rounded mt-2">
                   You can email{" "}
                   <Link
-                    href="info@captivity.co.za"
+                    href="mailto:info@captivity.co.za"
                     className="text-red-500 hover:text-red-600 font-bold"
                   >
                     info@captivity.co.za
@@ -224,9 +236,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -262,9 +278,9 @@ const Questions = () => {
                   register with us.
                   <br />
                   <br />
-                  Completed the
+                  Completed the{" "}
                   <Link
-                    href="info@captivity.co.za"
+                    href="/register"
                     className="text-red-500 hover:text-red-600 font-bold"
                   >
                     registration form.
@@ -276,9 +292,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -301,7 +321,7 @@ const Questions = () => {
                 <div id="q7" className="bg-gray-200 p-4 rounded mt-2 ">
                   Once you have completed the{" "}
                   <Link
-                    href="info@captivity.co.za"
+                    href="/register"
                     className="text-red-500 hover:text-red-600 font-bold"
                   >
                     registration form.
@@ -319,9 +339,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -344,14 +368,14 @@ const Questions = () => {
                 <div id="q8" className="bg-gray-200 p-4 rounded mt-2">
                   On the top of any captivity.co.za page, go to{" "}
                   <Link
-                    href="#"
+                    href="https://dev.captivity.co.za/staging/my-account/"
                     className="text-red-500 hover:text-red-600 font-bold"
                   >
                     My Account
                   </Link>{" "}
                   and click on the{" "}
                   <Link
-                    href="#"
+                    href="https://dev.captivity.co.za/staging/my-account/edit-account/"
                     className="text-red-500 hover:text-red-600 font-bold"
                   >
                     Account Info button
@@ -367,9 +391,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -392,12 +420,24 @@ const Questions = () => {
               {openQuestion === "q9" && (
                 <div id="q9" className="bg-gray-200 p-4 rounded mt-2">
                   Don’t worry, we’ll help you create a new one. On our log-in
-                  page, click on the bottom link “Lost your password?“. Enter
-                  your account email or username and we’ll then email you
-                  instructions on how to create a new password.
+                  page, click on the bottom link{" "}
+                  <Link
+                    href="https://dev.captivity.co.za/staging/my-account/lost-password/"
+                    className="text-red-500 font-bold hover:text-red-700"
+                  >
+                    “Lost your password?“
+                  </Link>
+                  .<br /> Enter your account email or username and we’ll then
+                  email you instructions on how to create a new password.
                   <br />
                   <br /> If you forgot the email you where using or want to use
-                  a new email to sign in, then please send us an email here
+                  a new email to sign in, then please send us an email{" "}
+                  <Link
+                    className="text-red-500 hover:text-red-700 font-bold"
+                    href="mailto:design@captivity.co.za"
+                  >
+                    here
+                  </Link>{" "}
                   where we will help you reset your account with your new email
                   address.
                   <br />
@@ -407,9 +447,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -434,7 +478,7 @@ const Questions = () => {
                   the
                   <br />{" "}
                   <Link
-                    href="#"
+                    href="https://dev.captivity.co.za/staging/?nltr=MTA7OTIyO2h0dHBzOi8vY2FwdGl2aXR5LmNvLnphLz9uYT11Jm5rPTkyMi03ZjEyOGIyNWQ5Jm5laz0xMC07OzUzNTM1ODJiZTExYjBmZjk4NTEyYmZlMWJiNDViMTNk"
                     className="text-red-500 hover:text-red-600 font-bold"
                   >
                     Unsubscribe
@@ -447,9 +491,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -497,9 +545,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -534,9 +586,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -566,9 +622,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -609,9 +669,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -642,9 +706,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -709,9 +777,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
@@ -750,9 +822,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}

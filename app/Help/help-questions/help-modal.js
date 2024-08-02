@@ -33,17 +33,18 @@ const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-50  flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
-      <div className="bg-white h-full rounded-lg shadow-lg p-6 w-full overflow-auto max-w-[700px]">
+      <div className="bg-white h-full rounded-lg shadow-lg p-6 w-full overflow-auto max-w-[700px] relative">
+        <button
+          className="text-gray-500 absolute top-4 right-4 hover:text-red-500"
+          onClick={onClose}
+        >
+          X
+        </button>
         <form onSubmit={handleSubmit} className="space-y-5 w-full  mx-auto">
           <h1 className="text-3xl font-bold mb-15 text-red-500 ">
             SEND US A MESSAGE
           </h1>
-          <button
-            className="text-end  text-gray-500 hover:text-gray-700"
-            onClick={onClose}
-          >
-            X
-          </button>
+
           <div className="p-2">
             <label className="block text-start text-sm font-medium text-gray-700">
               Name
