@@ -4,9 +4,14 @@ import { useState } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import { FaRegWindowMinimize } from "react-icons/fa";
 import Link from "next/link";
+import Modal from "./help-modal";
 
 const Questions = () => {
   const [openQuestion, setOpenQuestion] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const toggleContent = (question) => {
     setOpenQuestion(openQuestion === question ? null : question);
@@ -61,9 +66,13 @@ const Questions = () => {
                   </span>{" "}
                   <span className="flex text-center justify-center">
                     {" "}
-                    <button className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2">
+                    <button
+                      onClick={openModal}
+                      className="border-red-500  border-2 text-gray-500 bg-white px-4 py-2 rounded mt-2"
+                    >
                       Contact Us
                     </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal} />
                   </span>
                 </div>
               )}
