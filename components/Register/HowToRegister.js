@@ -16,13 +16,13 @@ const HowToRegister = () => {
           items. Should you fall into either of these categories and would like
           to register as a vendor?
         </p>
-        <Link href="/register">
-          <button className="mt-6 bg-red-600 text-white py-2 px-4 rounded">
+        <Link href="/Register">
+          <button className="mt-6 bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">
             Register Here
           </button>
         </Link>
       </section>
-      <FlipSection/>
+      <FlipSection />
     </div>
   );
 };
