@@ -42,7 +42,7 @@ const FlipSection = () => {
           <h2 className="md:text-3xl text-lg font-bold text-red-600 pb-5">
             VISIT THE FWRD WEBSITE
           </h2>
-          <p className="text-gray-500 md:text-md text-xs mb-8 py-4">
+          <p className="text-gray-500 md:text-lg text-xs mb-8 py-4">
             The FWRD Brand is distributed via promotional companies,
             advertising, event companies and resellers ONLY.
           </p>
