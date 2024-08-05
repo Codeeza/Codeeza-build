@@ -5,8 +5,6 @@ import Categories from "@/components/Categories/Categories";
 import Footer from "@/components/Footer/Footer";
 import CopyRight from "@/components/CopyRight/CopyRight";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
   title: "Captivity-Headwear And Apparel",
   description: "Headwear and Apparel",
@@ -15,8 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="bg">
+      <body className="bg">
+        <div>
           <Navbar />
           <Categories />
           {children}
