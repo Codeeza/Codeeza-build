@@ -7,13 +7,21 @@ const HowToRegister = () => {
   return (
     <div>
       <section className="bg-black text-center text-white py-16">
-        <h1 className="text-2xl font-bold">HOW TO REGISTER?</h1>
-        <p className="mt-4 max-w-2xl mx-auto">
+        <h1 className="md:text-2xl text-xl font-bold">HOW TO REGISTER?</h1>
+        <p className="pt-7 mx-10 md:text-md text-sm">
           Captivity is strictly distributed via authorised distributors namely:
           promotional companies, advertising and event companies as well as
-          independent resellers. We have a large offering of headwear and
+          independent resellers.
+        </p> 
+        
+        <p className="mx-10 md:text-md text-sm">
+        We have a large offering of headwear and
           apparel and are distributors of a large selection of promotional
-          items. Should you fall into either of these categories and would like
+          items.
+        </p>
+      
+        <p className="pb-4 mx-10 md:text-md text-sm">
+        Should you fall into either of these categories and would like
           to register as a vendor?
         </p>
         <Link href="/register">

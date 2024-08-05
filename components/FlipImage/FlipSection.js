@@ -11,8 +11,8 @@ const FlipSection = () => {
 
   return (
     <div className="p-5">
-      <div className="max-w-6xl mx-auto bg-white flex">
-        <div className="w-1/2">
+      <div className="max-w-6xl mx-auto bg-white flex flex-wrap">
+        <div className="w-full lg:w-1/2 hidden md:block">
           <ReactCardFlip flipDirection="vertical" isFlipped={isFlipped}>
             <Link
               href="https://fwrd.co.za/"
@@ -38,16 +38,16 @@ const FlipSection = () => {
             </Link>
           </ReactCardFlip>
         </div>
-        <div className="w-1/2 px-10">
-          <h2 className="text-3xl font-bold text-red-600 pb-5">
+        <div className="w-full px-10 lg:w-1/2 md:text-left text-center">
+          <h2 className="md:text-3xl text-lg font-bold text-red-600 pb-5">
             VISIT THE FWRD WEBSITE
           </h2>
-          <p className="text-gray-500 text-md mb-8 py-4">
+          <p className="text-gray-500 md:text-lg text-xs mb-8 py-4">
             The FWRD Brand is distributed via promotional companies,
             advertising, event companies and resellers ONLY.
           </p>
           <Link href="https://fwrd.co.za/">
-            <button className="bg-red-500 hover:bg-black text-white px-10 py-3 rounded">
+            <button className="bg-red-500 hover:bg-black text-white md:px-10 px-7 md:py-3 py-2 md:mb-0 mb-10 rounded">
               Visit Site
             </button>
           </Link>
