@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
@@ -8,112 +9,130 @@ const Categories = () => {
         <div className="hidden md:flex items-center space-x-8 px-20 md:px-20 ">
           <div className="relative group ">
             <button className="focus:outline-none px-10 py-2 items-center flex text-gray-600 hover:text-gray-400">
-              Headwear Collection
+              <Link href="/headwear/headwear-collection">
+                Headwear Collection{" "}
+              </Link>
               <MdKeyboardArrowDown />
             </button>
 
             <div className=" z-10 items-center absolute left-0 ml-8 mt-0 w-52 bg-white text-gray-600 rounded-md shadow-lg hidden group-hover:block">
               <ul>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  NEW in Headwear
+                  <Link href="/headwear/new-in-headwear">NEW in Headwear</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Flat peaks
+                  <Link href="/headwear/flat-peaks">Flat peaks</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Pre-curved Peaks
+                  <Link href="/headwear/pre-curved-peaks">
+                    Pre-curved Peaks
+                  </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Hats
+                  <Link href="/headwear/hats">Hats</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Multifunctional Headwear
+                  <Link href="/headwear/multifunctional-headwear">
+                    Multifunctional Headwear
+                  </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Beanies
+                  <Link href="/headwear/beanies">Beanies</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Trucker Caps
+                  <Link href="/headwear/trucker-caps">Trucker Caps</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Bucket Hats
+                  <Link href="/headwear/bucket-hats">Bucket Hats</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="relative group">
             <button className="focus:outline-none flex items-center px-10 py-2 text-gray-600 hover:text-gray-400">
-              Apparel Collection
+              <Link href="/apparel/apparel-collection">Apparel Collection</Link>
+
               <MdKeyboardArrowDown />
             </button>
             <div className=" z-10 absolute left-0 ml-8 mt-0 w-52 bg-white text-gray-600 rounded shadow-lg hidden group-hover:block">
               <ul>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  NEW in Apparel
+                  <Link href="/apparel/new-in-apparel">NEW in Apparel</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Men
+                  <Link href="/apparel/men">Men</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Women
+                  <Link href="/apparel/women"> Women</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Kids
+                  <Link href="/apparel/kids">Kids</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  T-Shirts
+                  <Link href="/apparel/t-shirts">T-Shirts</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Golfers
+                  <Link href="/apparel/golfers">Golfers</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Hoodies
+                  <Link href="/apparel/hoodies">Hoodies</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Jackets
+                  <Link href="/apparel/jackets">Jackets</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Bottoms
+                  <Link href="/apparel/bottoms">Bottoms</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="relative group">
             <button className="focus:outline-none flex items-center px-10 py-2 text-gray-600 hover:text-gray-400">
-              All Collection
+            <Link href="/collections/all-collections">All Collection</Link>
+              
               <MdKeyboardArrowDown />
             </button>
             <div className=" z-10 absolute left-0 ml-8  mt-0 w-52 bg-white text-gray-600 rounded shadow-lg hidden group-hover:block">
               <ul>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Signature Collection
+                <Link href="/collections/signature-collection">Signature Collection</Link>
+                  
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Baseball Collection
+                <Link href="/collections/baseball-collection">Baseball Collection</Link>
+                  
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Fashion Collection
+                <Link href="/collections/fashion-collection">Fashion Collection</Link>
+                  
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Leisure Collection
+                <Link href="/collections/leisure-collection">Leisure Collection</Link>
+                  
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Sport Collection
+                <Link href="/collections/sport-collection">Sport Collection</Link>
+                  
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Industrial Collection
+                <Link href="/collections/industrial-collection">Industrial Collection</Link>
+                  
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Camo Collection
+                <Link href="/collections/camo-collection">Camo Collection</Link>
+                  
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Winter Collection
+                <Link href="/collections/winter-collection">Winter Collection</Link>
+                  
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  Kids Collection
+                <Link href="/collections/kids-collection">Kids Collection</Link>
+                  
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  African Collection
+                <Link href="/collections/african-collection">African Collection</Link>
+                  
                 </li>
               </ul>
             </div>

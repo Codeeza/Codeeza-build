@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CustomContainer = () => {
   return (
-    <section className="bg-white mb-10 w-full">
+    <section className="bg-white w-full hidden sm:block">
       <div className="flex w-full">
         <div className="relative group flex-1 overflow-hidden h-[500px]">
           <Image
