@@ -118,7 +118,7 @@ export default function Home() {
             width={1368}
             height={262}
             alt="Headwear-collection-Header"
-            className="w-full h-[300px] filter brightness-75"
+            className="w-full h-[200px] sm:h-[300px] filter brightness-75"
             style={{ objectFit: "cover" }}
           />
           <div className="absolute top-20 sm:top-5  md:top-20 lg:top-24 w-full font-bold bg-opacity-50 text-white text-center px-4">
@@ -214,6 +214,7 @@ export default function Home() {
                 >
                   All
                 </Link>
+
                 <Link
                   className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
                   href="/collections/camo-collection"

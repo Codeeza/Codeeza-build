@@ -61,7 +61,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Search for product"
-                className="px-2 w-[150px] py-2 rounded-l-sm text-black"
+                className="px-2 w-[150px] py-2 rounded-l-sm bg-white text-black"
               />
               <button className="bg-red-600 text-lg rounded-r-sm mr-16 text-white px-2 py-2 hover:bg-red-500">
                 SEARCH
@@ -84,11 +84,10 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white text-black shadow-xl z-10">
           <ul>
-            <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
-              onClick={() => handleNavigation("/collection/headwear")}
-            >
-              Headwear Collection
+            <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
+              <Link href="/headwear/headwear-collection">
+                Headwear Collection
+              </Link>
             </li>
             <li
               className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
