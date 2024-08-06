@@ -1,6 +1,8 @@
 "use client"
 
 
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const AmericanoCap = () => {
@@ -18,16 +20,21 @@ const AmericanoCap = () => {
     <main className="py-3">
       <div className="card card-compact rounded-md object-cover w-90">
         <figure>
-          <img
+        <Link href="/products/americano-cap">
+          <Image
             src={
               isHovered
-                ? "https://captivity.co.za/wp-content/uploads/2023/09/Americano-Royal-Foc1-scaled.jpg"
-                : "https://captivity.co.za/wp-content/uploads/2020/11/Americano-model-scaled.jpg"
+                ? "/Americano-Royal-Foc1-scaled.jpg"
+                : "/Americano-model-scaled.jpg"
             }
-            alt="Male model with a blue cap and blue T-Shirt"
+            alt="Blue T-Shirt"
+            width={2560}
+            height={2560}
+            style={{ cursor: 'pointer' }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           />
+          </Link>
         </figure>
         <div className="card-body bg-gray-300 rounded-b  hover:shadow-lg">
           <h2 className="card-title flex justify-center">Americano Cap</h2>
