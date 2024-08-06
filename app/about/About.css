@@ -1,0 +1,59 @@
+/* About.css */
+.center {
+  text-align: center;
+}
+
+.about-image-container {
+  position: relative; /* Container for positioning the text */
+  width: 100%;
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Optional: Set a max height to prevent excessive stretching */
+  object-fit: cover; /* Ensures the image covers the background area */
+  margin: 0; /* Remove default margin */
+}
+
+.heading-overlay {
+  position: absolute; /* Position text over the image */
+  top: 50%; /* Center vertically */
+  left: 10%; /* Position text from the left edge of the image */
+  transform: translateY(-50%); /* Center vertically */
+  text-align: left; /* Align text to the left */
+  max-width: 40%; /* Limit width of text overlay */
+}
+
+.heading-overlay .headwear,
+.heading-overlay .collection {
+  display: block; /* Ensure each part is on its own line */
+}
+
+.heading-overlay .headwear {
+  color: black; /* Color for HEADWEAR */
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold; /* Make text bold */
+}
+
+.heading-overlay .collection {
+  color: red; /* Color for COLLECTION */
+  font-size: 1.5rem; /* Adjust size as needed */
+  font-weight: bold; /* Make text bold */
+}
+
+/* Style for the About header */
+h1.center {
+  text-transform: uppercase; /* Makes text uppercase */
+  color: black; /* Sets text color to black */
+  font-weight: bold; /* Makes text bold */
+  margin: 20px 0; /* Adds spacing above and below */
+}
+
+/* Style for the paragraph */
+p {
+  color: black; /* Sets text color to black */
+  line-height: 1.6; /* Adjust line height for spacing between lines */
+  margin: 20px 0; /* Adds vertical spacing between paragraphs */
+}

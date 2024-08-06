@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ReactCardFlip from "react-card-flip";
+// import ReactCardFlip from "react-card-flip";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -13,7 +13,7 @@ const FlipSection = () => {
     <div className="p-5">
       <div className="max-w-6xl mx-auto bg-white flex">
         <div className="w-1/2">
-          <ReactCardFlip flipDirection="vertical" isFlipped={isFlipped}>
+          {/* <ReactCardFlip flipDirection="vertical" isFlipped={isFlipped}> */}
             <Link
               href="https://fwrd.co.za/"
               onMouseEnter={() => setIsFlipped(true)}
@@ -36,7 +36,7 @@ const FlipSection = () => {
                 height={465}
               />
             </Link>
-          </ReactCardFlip>
+          {/* </ReactCardFlip> */}
         </div>
         <div className="w-1/2 px-10">
           <h2 className="text-3xl font-bold text-red-600 pb-5">
