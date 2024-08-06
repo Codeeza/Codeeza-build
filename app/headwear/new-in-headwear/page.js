@@ -1,133 +1,159 @@
 "use client";
 import ProductCarousel from "@/components/ProductPageCarousel/ProductCarousel";
 import SideMenuDopDown from "@/components/ProductPageSideMenuDropDown/SideMenuDopDown";
+import SortDropdown from "@/components/SortCardsDropdown/SortDropdown";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const products = [
-  {
-    id: 1,
-    title: "Ice Beanie",
-    image: "/ice-beanie-dusty-pink-.jpg",
-    image2: "/ice-beanie-burnt-orange-.jpg",
-    rating: 4.5,
-    price: "R29.99",
-    status: "new", // 'soldout' or 'new'
-  },
-  {
-    id: 2,
-    title: "Original Trucker Camo",
-    image: "/Original-Trucker-Camo-model-1.jpeg",
-    image2: "/Original-Trucker-Camo-Green-Foc1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "",
-  },
-  {
-    id: 3,
-    title: "American Two Tone Cap",
-    image: "/American-Two-Tone-Grey-Melange-Navy-Foc1.jpg",
-    image2: "/American-Two-Tone-Grey-Melange-Black-Soc1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "soldout",
-  },
-  {
-    id: 5,
-    title: "Venture Hat Royal Boc",
-    image: "/Venture-Hat-model-scaled.webp",
-    image2: "/Venture-Hat-Royal-Boc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "",
-  },
-  {
-    id: 6,
-    title: "Savannah Hat Dark Khaki",
-    image: "/Savannah-Hat-model.jpg",
-    image2: "/Savannah-Hat-Dark-Khaki-foc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 7,
-    title: "Supafit Red",
-    image2: "/Supafit-Red-Foc.jpg",
-    image: "/Supafit-new-model.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 8,
-    title: "Harlem Bucket",
-    image: "/Harlem-Bucket-model(1).jpg",
-    image2: "/Harlem-Bucket-Hat-Charcoal-1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "",
-  },
-  {
-    id: 9,
-    title: "Linen lilac",
-    image: "/Linen-model.jpg",
-    image2: "/Linen-lilac-Foc1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 10,
-    title: "Camper Trucker",
-    image: "/Camper-Trucker-model.jpg",
-    image2: "/Camper-Trucker-Raspberry-Khaki-Foc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 11,
-    title: "Barista Apron",
-    image: "/Barista-Apron-model.jpg",
-    image2: "/Barista-Apron-Black1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 12,
-    title: "Harlem Bucket",
-    image: "/Harlem-Bucket-model(1).jpg",
-    image2: "/Harlem-Bucket-Hat-Charcoal-1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "",
-  },
-  {
-    id: 13,
-    title: "Savannah Hat Dark Khaki",
-    image: "/Savannah-Hat-model.jpg",
-    image2: "/Savannah-Hat-Dark-Khaki-foc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 14,
-    title: "Camper Trucker",
-    image: "/Camper-Trucker-model.jpg",
-    image2: "/Camper-Trucker-Raspberry-Khaki-Foc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  // Add more products as needed
-];
-
 export default function Page() {
   const [hoveredProductId, setHoveredProductId] = useState(null);
+  const [products, setProducts] = useState([
+    {
+      id: 1,
+      title: "Ice Beanie",
+      image: "/ice-beanie-dusty-pink-.jpg",
+      image2: "/ice-beanie-burnt-orange-.jpg",
+      rating: 4.5,
+      price: 29.99,
+      status: "new", // 'soldout' or 'new'
+    },
+    {
+      id: 2,
+      title: "Original Trucker Camo",
+      image: "/Original-Trucker-Camo-model-1.jpeg",
+      image2: "/Original-Trucker-Camo-Green-Foc1.jpg",
+      rating: 4.0,
+      price: "R25.99",
+      status: "",
+    },
+    {
+      id: 3,
+      title: "American Two Tone Cap",
+      image: "/American-Two-Tone-Grey-Melange-Navy-Foc1.jpg",
+      image2: "/American-Two-Tone-Grey-Melange-Black-Soc1.jpg",
+      rating: 4.0,
+      price: "R25.99",
+      status: "soldout",
+    },
+    {
+      id: 5,
+      title: "Venture Hat Royal Boc",
+      image: "/Venture-Hat-model-scaled.webp",
+      image2: "/Venture-Hat-Royal-Boc.jpg",
+      rating: 4.0,
+      price: "R25.99",
+      status: "",
+    },
+    {
+      id: 6,
+      title: "Savannah Hat Dark Khaki",
+      image: "/Savannah-Hat-model.jpg",
+      image2: "/Savannah-Hat-Dark-Khaki-foc.jpg",
+      rating: 4.0,
+      price: "R25.99",
+      status: " ",
+    },
+    {
+      id: 7,
+      title: "Supafit Red",
+      image2: "/Supafit-Red-Foc.jpg",
+      image: "/Supafit-new-model.jpg",
+      rating: 4.0,
+      price: "R2.99",
+      status: " ",
+    },
+    {
+      id: 8,
+      title: "Harlem Bucket",
+      image: "/Harlem-Bucket-model(1).jpg",
+      image2: "/Harlem-Bucket-Hat-Charcoal-1.jpg",
+      rating: 4.0,
+      price: "R250.99",
+      status: "",
+    },
+    {
+      id: 9,
+      title: "Linen lilac",
+      image: "/Linen-model.jpg",
+      image2: "/Linen-lilac-Foc1.jpg",
+      rating: 3.0,
+      price: "R2500.99",
+      status: " ",
+    },
+    {
+      id: 10,
+      title: "Camper Trucker",
+      image: "/Camper-Trucker-model.jpg",
+      image2: "/Camper-Trucker-Raspberry-Khaki-Foc.jpg",
+      rating: 5.0,
+      price: "R50.99",
+      status: " ",
+    },
+    {
+      id: 11,
+      title: "Barista Apron",
+      image: "/Barista-Apron-model.jpg",
+      image2: "/Barista-Apron-Black1.jpg",
+      rating: 2.0,
+      price: "R25.99",
+      status: " ",
+    },
+    {
+      id: 12,
+      title: "Harlem Bucket",
+      image: "/Harlem-Bucket-model(1).jpg",
+      image2: "/Harlem-Bucket-Hat-Charcoal-1.jpg",
+      rating: 2.0,
+      price: "R25.99",
+      status: "",
+    },
+    {
+      id: 13,
+      title: "Savannah Hat Dark Khaki",
+      image: "/Savannah-Hat-model.jpg",
+      image2: "/Savannah-Hat-Dark-Khaki-foc.jpg",
+      rating: 1.0,
+      price: "R25.99",
+      status: " ",
+    },
+    {
+      id: 14,
+      title: "Camper Trucker",
+      image: "/Camper-Trucker-model.jpg",
+      image2: "/Camper-Trucker-Raspberry-Khaki-Foc.jpg",
+      rating: 3.0,
+      price: "R25.99",
+      status: " ",
+    },
+    // Add more products as needed
+  ]);
+  const handleSortChange = (sortValue) => {
+    let sortedProducts = [...products];
+
+    switch (sortValue) {
+      case "popularity":
+        sortedProducts.sort((a, b) => b.popularity - a.popularity);
+        break;
+      case "rating":
+        sortedProducts.sort((a, b) => b.rating - a.rating);
+        break;
+      case "latest":
+        // Assuming latest means newest items, here we just sort by ID for simplicity
+        sortedProducts.sort((a, b) => b.id - a.id);
+        break;
+      case "priceLowToHigh":
+        sortedProducts.sort((a, b) => a.price - b.price);
+        break;
+      case "priceHighToLow":
+        sortedProducts.sort((a, b) => b.price - a.price);
+        break;
+      default:
+        break;
+    }
+
+    setProducts(sortedProducts);
+  };
 
   function handleMouseEnter(productId) {
     setHoveredProductId(productId);
@@ -234,7 +260,9 @@ export default function Page() {
 
             {/* Main Content */}
             <div className="w-full lg:w-3/4 m-5">
-              <div>Hey</div>
+              <div>
+                <SortDropdown onSortChange={handleSortChange} />
+              </div>
 
               {/* Products Grid */}
               <div className="grid sm:grid-cols-1 grid-cols-2 lg:grid-cols-4 gap-4">
