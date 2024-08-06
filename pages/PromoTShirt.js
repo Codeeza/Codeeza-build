@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const PromoTShirt = () => {
@@ -17,16 +19,21 @@ const PromoTShirt = () => {
     <main className="py-3">
       <div className="card card-compact rounded-md object-cover w-90">
         <figure>
-          <img
+        <Link href="/products/promo-t-shirt">
+          <Image
             src={
               isHovered
-                ? "https://captivity.co.za/wp-content/uploads/2023/04/Kids-Promo-T-Shirt-Lime2.jpg"
-                : "https://captivity.co.za/wp-content/uploads/2022/02/Promo-T-Shirt-Model-1.jpg"
+                ? "/Kids-Promo-T-Shirt-Lime2.jpg"
+                : "/Promo-T-Shirt-Model-1.jpg"
             }
-            alt=" Female Model with a red T-Shirt"
+            alt="Red T-Shirt"
+            width={1834}
+            height={1834}
+            style={{ cursor: 'pointer' }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           />
+          </Link>
         </figure>
         <div className="card-body bg-gray-300 rounded-b hover:shadow-lg">
           <h2 className="card-title flex justify-center">Promo T-Shirt</h2>

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const AspenBeanie = () => {
@@ -17,16 +19,21 @@ const AspenBeanie = () => {
     <main className="py-3">
       <div className="card card-compact  rounded-md object-cover w-90">
         <figure>
-          <img
+        <Link href="/products/aspen-beanie">
+          <Image
             src={
               isHovered
-                ? "https://captivity.co.za/wp-content/uploads/2024/02/Aspen-Beanie-Lime.jpg"
-                : "https://captivity.co.za/wp-content/uploads/2020/11/Aspen-Beanie-model.jpg"
+                ? "/Aspen-Beanie-Lime.jpg"
+                : "/Aspen-Beanie-model.jpg"
             }
-            alt="Male Model with a orange beanie"
+            alt="Orange Beanie"
+            width={1834}
+            height={1834}
+            style={{ cursor: 'pointer' }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           />
+          </Link>
         </figure>
         <div className="card-body bg-gray-300 rounded-b hover:shadow-lg">
           <h2 className="card-title flex justify-center">Aspen Beanie</h2>
