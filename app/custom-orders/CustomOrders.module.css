@@ -1,5 +1,7 @@
+/* CustomOrders.module.css */
+
 /* Container styles */
-.custom-orders-container {
+.customOrdersContainer {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontally */
@@ -7,7 +9,7 @@
 }
 
 /* Header styles */
-.custom-orders-title {
+.customOrdersTitle {
   color: red;
   font-size: xx-large;
   text-align: center;
@@ -18,7 +20,7 @@
 }
 
 /* Line under the header */
-.custom-orders-title::after {
+.customOrdersTitle::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -30,7 +32,7 @@
 }
 
 /* General line styles */
-.custom-line {
+.customLine {
   position: relative;
   width: 80%; /* Adjust width for a reasonable line length */
   max-width: 600px; /* Ensure consistency in max width */
@@ -40,39 +42,40 @@
 }
 
 /* Ensure centering of lines */
-.custom-line-wrapper {
+.customLineWrapper {
   width: 100%; /* Ensure the wrapper is full width */
   display: flex;
   justify-content: center; /* Center the line inside the wrapper */
 }
 
 /* Additional spacing for specific lines */
-.custom-line-procedures,
-.custom-line-headwear-apparel {
+.customLineProcedures,
+.customLineHeadwearApparel {
   margin-top: 2rem; /* Space before the line */
 }
 
 /* Section styles */
-.custom-orders-section {
+.customOrdersSection {
   text-align: left; /* Align text to the left */
   max-width: 800px; /* Constrain the width of the sections */
 }
 
 /* Paragraph styles */
-.custom-orders-section p {
+.customOrdersSection p {
   color: black; /* Set paragraph text color to black */
 }
 
 /* Custom orders content */
-.custom-orders-content {
+.customOrdersContent {
   display: flex; /* Display content in a row */
   justify-content: space-between; /* Space between the two sections */
 }
 
-.custom-orders-section-content {
+.customOrdersSectionContent {
   width: 48%; /* Adjust width to fit side by side */
 }
 
-a {
+/* Scoped anchor tag styles */
+.customOrdersSection a {
   color: red;
 }

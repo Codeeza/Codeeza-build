@@ -1,18 +1,18 @@
 import React from "react";
-import "./custom-orders.css";
+import styles from "./CustomOrders.module.css";
 
 const CustomOrders = () => {
   return (
-    <div className="custom-orders-container">
-      <h1 className="custom-orders-title text-4xl font-bold mb-4">
+    <div className={styles.customOrdersContainer}>
+      <h1 className={`${styles.customOrdersTitle} text-4xl font-bold mb-4`}>
         Custom Orders
       </h1>
-      <br></br>
-      <section className="custom-orders-section mb-4">
+      <br />
+      <section className={`${styles.customOrdersSection} mb-4`}>
         <h2 className="text-xl font-semibold text-black text-center">
           CUSTOM FACTORY ORDERS
         </h2>
-        <br></br>
+        <br />
         <div>
           <p>
             Custom factory orders give you greater flexibility and allow you to
@@ -21,35 +21,35 @@ const CustomOrders = () => {
             to match corporate colours and logos – or develop your own, unique
             range.
           </p>
-          <br></br>
+          <br />
           <p>
             Our design team has the experience and expertise to bring your ideas
             to life. Email your enquiry to{" "}
-            <a href="https//www.monica@captivity.co.za.">
+            <a href="https://www.monica@captivity.co.za.">
               monica@captivity.co.za
             </a>{" "}
             We would love to hear from you.
           </p>
-          <br></br>
+          <br />
         </div>
       </section>
 
       {/* Line Above Procedures */}
-      <div className="custom-line-wrapper">
-        <div className="custom-line custom-line-procedures"></div>
+      <div className={styles.customLineWrapper}>
+        <div className={`${styles.customLine} ${styles.customLineProcedures}`}></div>
       </div>
 
-      <section className="custom-orders-section mb-4">
+      <section className={`${styles.customOrdersSection} mb-4`}>
         <h2 className="text-xl font-semibold text-black text-center">
           PROCEDURES
         </h2>
-        <br></br>
+        <br />
         <p>
           Enquiries for orders can be emailed to{" "}
-          <a href="https//www.info@captivity.co.za">info@captivity.co.za</a>
+          <a href="https://www.info@captivity.co.za">info@captivity.co.za</a>
         </p>
-        <br></br>
-        <div className="custom-orders-section text-black">
+        <br />
+        <div className={`${styles.customOrdersSection} text-black`}>
           <li>
             Our minimum requirement for custom factory orders is 3000 units per
             colour, per style.
@@ -69,7 +69,7 @@ const CustomOrders = () => {
             delivery.
           </li>
         </div>
-        <br></br>
+        <br />
         <p>
           For further information, please contact{" "}
           <a className="text-gray-500 font-bold">Monica at (021) 510 3868</a>
@@ -77,54 +77,53 @@ const CustomOrders = () => {
       </section>
 
       {/* Line Above Understanding Custom Headwear and Apparel */}
-      <div className="custom-line-wrapper">
-        <div className="custom-line custom-line-headwear-apparel"></div>
+      <div className={styles.customLineWrapper}>
+        <div className={`${styles.customLine} ${styles.customLineHeadwearApparel}`}></div>
       </div>
-      <br></br>
-      <section className="custom-orders-section mb-4">
+      <br />
+      <section className={`${styles.customOrdersSection} mb-4`}>
         <h2 className="text-xl font-semibold text-black text-center">
           UNDERSTANDING CUSTOM HEADWEAR AND APPAREL
         </h2>
-        <br></br>
-        <div className="custom-orders-content text-black">
-          <div className="custom-orders-section-content">
+        <br />
+        <div className={`${styles.customOrdersContent} text-black`}>
+          <div className={styles.customOrdersSectionContent}>
             <h2 className="text-red-600">HEADWEAR STYLES</h2>
-            <br></br>
+            <br />
             <h4>1.Crown</h4>
-            <br></br>
+            <br />
             <li>
-              {" "}
               consists of five or six panels sewn together to form a cover for
               the head
             </li>
             <li> made of various fabrics</li>
             <li> Panels may vary in size and shape</li>
             <li> Standard panel width: 75mm across</li>
-            <br></br>
+            <br />
             <h4>2.Button</h4>
-            <br></br>
+            <br />
             <li>covered metal button size</li>
             <li>15mm diameter</li>
-            <br></br>
+            <br />
             <h4>3. Eyelets</h4>
-            <br></br>
+            <br />
             <li>embroidered eyelets</li>
             <li>gunmetal eyelets: 8mm diameter</li>
-            <br></br>
+            <br />
             <h4>4.Sweatband</h4>
-            <br></br>
+            <br />
             <li>30mm wide</li>
             <li>4 rows of stitching on some styles.</li>
-            <br></br>
+            <br />
             <h4>5.Closure</h4>
-            <br></br>
+            <br />
             <li>Gunmetal belt buckle and tuck-in return</li>
             <li>Self-fabric velcro strap</li>
             <li>Plastic tab</li>
             <li>Gunmetal clasp</li>
-            <br></br>
+            <br />
             <h4>6.PEAK</h4>
-            <br></br>
+            <br />
             <li>
               Pre-curved peak of plastic compound which is flexible,durable, and
               ensures maintenance of the shape
@@ -134,9 +133,9 @@ const CustomOrders = () => {
             <li>Peak length: +/- 70mm from crown</li>
             <li>Binding on edge of peak</li>
             <li>Under peak – varies in fabric type</li>
-            <br></br>
+            <br />
             <h4>7.GENERAL</h4>
-            <br></br>
+            <br />
             <li>Cap size: 58cm circumference</li>
             <li>Kids cap size: 54cm</li>
             <li>Hat size: S/M – 57cm, L/XL – 60cm</li>
@@ -144,9 +143,9 @@ const CustomOrders = () => {
             <li>Back strap size: 16mm wide x 145mm long</li>
             <li>Covered inside seams</li>
             <li>Crown is pro-stitched to peak</li>
-            <br></br>
+            <br />
             <h4>8.BRANDING</h4>
-            <br></br>
+            <br />
             <li>Embroidery or screen printing</li>
             <li>logo or lettering on front</li>
             <li>cap embroidery size: cap 100mm x 53mm</li>
@@ -165,12 +164,12 @@ const CustomOrders = () => {
               <li>an arc</li>
             </ul>
           </div>
-          <br></br>
-          <div className="custom-orders-section-content">
+          <br />
+          <div className={styles.customOrdersSectionContent}>
             <h2 className="text-red-600">APPAREL</h2>
-            <br></br>
+            <br />
             <h4>2.Fabric</h4>
-            <br></br>
+            <br />
             <li>Heavy brushed cotton</li>
             <li>Cotton twill</li>
             <li>Nylon</li>
@@ -181,16 +180,15 @@ const CustomOrders = () => {
             <li>Polar Fleece</li>
             <li>Polymesh / Airtex</li>
             <li>Micro-fibre</li>
-            <br></br>
+            <br />
             <h4>8.label</h4>
-            <br></br>
+            <br />
             <li>woven label sewn onto the sweatband of each Captivity item.</li>
             <li>
-              {" "}
               Look out for this watermark in all our caps to be assured of the
               100% product quality guarantee:
             </li>
-            <br></br>
+            <br />
           </div>
         </div>
       </section>
