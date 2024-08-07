@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const ProductSection = () => {
@@ -15,43 +16,47 @@ const ProductSection = () => {
         <div className="flex flex-nowrap items-center justify-center max-w-[950px] ">
           <div className="w-full sm:w-1/2 md:w-1/4 p-2 ">
             <div className="relative group rounded-lg overflow-hidden ">
-              <Image
-                src="https://captivity.co.za/wp-content/uploads/2023/09/Apparel-cat-btn-2.svg"
-                alt="Headwear"
-                className="block sm:hidden w-full h-auto"
-                width={100}
-                height={200}
-              />
-              <Image
-                src="/1-Headwear-CTA-spring.jpg"
-                alt="Headwear"
-                className="hidden sm:block w-full h-auto hover:cursor-pointer group-hover:brightness-50 transition duration-1000"
-                width={786}
-                height={1239}
-              />
-              <div className="absolute bottom-8 left-0 w-full hover:cursor-pointer font-bold text-white text-center py-2 transition duration-700 group-hover:bg-opacity-75 hidden sm:block">
-                <span className="text-lg group-hover:text-xl hover:cursor-pointer transition duration-700">
-                  HEADWEAR
-                </span>
-              </div>
+              <Link href="/headwear/headwear-collection">
+                <Image
+                  src="https://captivity.co.za/wp-content/uploads/2023/09/Apparel-cat-btn-2.svg"
+                  alt="Headwear"
+                  className="block sm:hidden w-full h-auto"
+                  width={100}
+                  height={200}
+                />
+                <Image
+                  src="/1-Headwear-CTA-spring.jpg"
+                  alt="Headwear"
+                  className="hidden sm:block w-full h-auto hover:cursor-pointer group-hover:brightness-50 transition duration-1000"
+                  width={786}
+                  height={1239}
+                />
+                <div className="absolute bottom-8 left-0 w-full hover:cursor-pointer font-bold text-white text-center py-2 transition duration-700 group-hover:bg-opacity-75 hidden sm:block">
+                  <span className="text-lg group-hover:text-xl hover:cursor-pointer transition duration-700">
+                    HEADWEAR
+                  </span>
+                </div>
+              </Link>
             </div>
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4 p-2">
             <div className="relative group rounded-lg overflow-hidden">
-              <Image
-                src="https://captivity.co.za/wp-content/uploads/2023/05/Headwear-cat-btn.svg"
-                alt="Apparel"
-                className="block sm:hidden w-full h-auto "
-                width={100}
-                height={200}
-              />
-              <Image
-                src="/2-Apparel-CTA-spring.jpg"
-                alt="Apparel"
-                className="hidden sm:block w-full h-auto hover:cursor-pointer group-hover:brightness-50 transition duration-1000"
-                width={786}
-                height={1239}
-              />
+              <Link href="/apparel/apparel-collection">
+                <Image
+                  src="https://captivity.co.za/wp-content/uploads/2023/05/Headwear-cat-btn.svg"
+                  alt="Apparel"
+                  className="block sm:hidden w-full h-auto "
+                  width={100}
+                  height={200}
+                />
+                <Image
+                  src="/2-Apparel-CTA-spring.jpg"
+                  alt="Apparel"
+                  className="hidden sm:block w-full h-auto hover:cursor-pointer group-hover:brightness-50 transition duration-1000"
+                  width={786}
+                  height={1239}
+                />
+              </Link>
               <div className="absolute bottom-8 left-0 w-full hover:cursor-pointer font-bold bg-opacity-50 text-white text-center py-2 transition duration-700 group-hover:bg-opacity-75 hidden sm:block">
                 <span className="text-lg group-hover:text-xl hover:cursor-pointer transition duration-300">
                   APPAREL
@@ -61,20 +66,22 @@ const ProductSection = () => {
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4 p-2">
             <div className="relative group rounded-lg overflow-hidden">
-              <Image
-                src="https://captivity.co.za/wp-content/uploads/2023/09/T-Shirts-cat-btn.svg"
-                alt="T-Shirts"
-                className="block sm:hidden w-full h-auto"
-                width={100}
-                height={200}
-              />
-              <Image
-                src="/3-T-shirts-CTA-spring.jpg"
-                alt="T-Shirts"
-                className="hidden sm:block hover:cursor-pointer w-full h-auto group-hover:brightness-50 transition duration-1000"
-                width={786}
-                height={1239}
-              />
+              <Link href="/shirts/just-t-shirts">
+                <Image
+                  src="https://captivity.co.za/wp-content/uploads/2023/09/T-Shirts-cat-btn.svg"
+                  alt="T-Shirts"
+                  className="block sm:hidden w-full h-auto"
+                  width={100}
+                  height={200}
+                />
+                <Image
+                  src="/3-T-shirts-CTA-spring.jpg"
+                  alt="T-Shirts"
+                  className="hidden sm:block hover:cursor-pointer w-full h-auto group-hover:brightness-50 transition duration-1000"
+                  width={786}
+                  height={1239}
+                />
+              </Link>
               <div className="absolute font-bold bottom-8 hover:cursor-pointer left-0 w-full bg-opacity-50 text-white text-center py-2 transition duration-700 group-hover:bg-opacity-75 hidden sm:block">
                 <span className="text-lg group-hover:text-xl hover:cursor-pointer transition duration-300">
                   T-SHIRTS
@@ -84,20 +91,22 @@ const ProductSection = () => {
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4 p-2">
             <div className="relative group rounded-lg overflow-hidden">
-              <Image
-                src="https://captivity.co.za/wp-content/uploads/2023/05/Kids-cat-btn.svg"
-                alt="Kids"
-                className="block sm:hidden w-full h-auto "
-                width={100}
-                height={200}
-              />
-              <Image
-                src="/4-Kids-CTA-spring.jpg"
-                alt="Kids"
-                className="hidden sm:block w-full h-auto hover:cursor-pointer group-hover:brightness-50 transition duration-1000"
-                width={786}
-                height={1239}
-              />
+              <Link href="/collections/kids-collection">
+                <Image
+                  src="https://captivity.co.za/wp-content/uploads/2023/05/Kids-cat-btn.svg"
+                  alt="Kids"
+                  className="block sm:hidden w-full h-auto "
+                  width={100}
+                  height={200}
+                />
+                <Image
+                  src="/4-Kids-CTA-spring.jpg"
+                  alt="Kids"
+                  className="hidden sm:block w-full h-auto hover:cursor-pointer group-hover:brightness-50 transition duration-1000"
+                  width={786}
+                  height={1239}
+                />
+              </Link>
               <div className="absolute bottom-8 left-0 w-full hover:cursor-pointer font-bold bg-opacity-50 text-white text-center py-2 transition duration-1000 group-hover:bg-opacity-75 hidden sm:block">
                 <span className="text-lg group-hover:text-xl hover:cursor-pointer transition duration-1000">
                   KIDS
