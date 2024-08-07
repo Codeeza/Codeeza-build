@@ -20,8 +20,8 @@ const Register = () => {
       first_name: "First Name",
       last_name: "Last Name",
       phone_num: "Phone Number",
-      nature_of_business: "Nature of Bussiness",
-      buying_from: "KEVRO",
+      nature_of_business: "",
+      buying_from: "",
       specify_other_option: "",
       e_links: "https://github.com/Codeeza/Codeeza-build.git",
       pos_held_in_comp: "Role at Company",
@@ -32,9 +32,9 @@ const Register = () => {
         city: "city",
         zipcode: 7700,
         country: "Country",
-        sale_rep_assisted: "Bonita  - Cape Town",
-        terms_agreement : true
-      }
+      },
+      sale_rep_assisted: "Bonita  - Cape Town",
+      terms_agreement : true
     })
 
     const handleSubmit = (e) => {
@@ -85,6 +85,8 @@ const Register = () => {
 
           {mounted && (
             <form
+            action='/api/register'
+            method='POST'
               onSubmit={handleSubmit}
               autoComplete="off"
               className="p-5 text-slate-500 font-bold space-y-5"
