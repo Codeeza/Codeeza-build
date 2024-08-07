@@ -4,10 +4,10 @@ import { FaLongArrowAltUp } from "react-icons/fa";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import CountrySelect from "@/components/CountrySelect/CountrySelect";
+import { countries } from "@/lib/CountrySelect";
 import { useState } from "react";
 
-const Register = () => {
+const Register = ({value}) => {
 
 const [company_name_OR_acount_num, setCompany_name_OR_acount_num ] = useState("")
 const [vat_num, setVat_num ] = useState(0)
@@ -25,6 +25,7 @@ const [e_links, setE_links ] = useState("")
 const [pos_held_in_comp, setPos_held_in_comp ] = useState("")
 const [location, setLocation ] = useState({
   street: "",
+  street_line_two: "",
   suburb: "",
   city: "",
   zipcode: 0,
@@ -37,7 +38,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
 
   const handleFormSubmit = (e) => {
       e.preventDefault()
-      console.log(company_name_OR_acount_num, vat_num, ck_num, user_name)
+      console.log(company_name_OR_acount_num, vat_num, ck_num, user_name, user_email, first_name, last_name, phone_num, nature_of_business, buying_from, specify_other_option, e_links, pos_held_in_comp, 
+        location.street, location.street_line_two, location.suburb)
   }
   
   return (
@@ -154,7 +156,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="userEmail"
                 type="email"
-                
+                value={user_email}
+                onChange={(e) => setUser_email(e.target.value)}
               />
             </div>
 
@@ -167,7 +170,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="firstName"
                 type="text"
-                
+                value={first_name}
+                onChange={(e) => setFirst_name(e.target.value)}
               />
             </div>
 
@@ -180,7 +184,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="lastName"
                 type="text"
-                
+                value={last_name}
+                onChange={(e) => setLast_name(e.target.value)}
               />
             </div>
 
@@ -193,7 +198,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="phoneNumber"
                 type="tel"
-                
+                value={phone_num}
+                onChange={(e) => setPhone_num(e.target.value)}
               />
             </div>
 
@@ -205,7 +211,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
               <select
                 id="natureOfBusiness"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
-                
+                value={nature_of_business}
+                onChange={(e) => setNature_of_business(e.target.value)}
               >
                 <option value="promotional">Promotional</option>
                 <option value="brandingAndPrint">Branding & Print</option>
@@ -229,6 +236,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
               <select
                 id="whoYouBuyingFrom"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
+                value={buying_from}
+                onChange={(e) => setBuying_from(e.target.value)}
                 
               >
                 <option value="none">None</option>
@@ -250,6 +259,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="ifOther"
                 type="text"
+                value={specify_other_option}
+                onChange={(e) => setSpecify_other_option(e.target.value)}
               />
             </div>
 
@@ -262,8 +273,9 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="webOrSocial"
                 type="url"
-                
                 placeholder="www.yourcompany.com"
+                value={e_links}
+                onChange={(e) => setE_links(e.target.value)}
               />
               <label className="font-normal">
                 Where would you be reselling our products?
@@ -276,6 +288,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="posInComp"
                 type="text"
+                value={pos_held_in_comp}
+                onChange={(e) => setPos_held_in_comp(e.target.value)}
               />
             </div>
 
@@ -288,8 +302,9 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="address1"
                 type="text"
-                
                 placeholder="House number and street name"
+                value={location.street}
+                onChange={(e) => setLocation({...location, street: e.target.value})}
               />
             </div>
 
@@ -300,6 +315,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 id="address2"
                 type="text"
                 placeholder="Apartment, suit, unit, etc."
+                value={location.street_line_two}
+                onChange={(e) => setLocation({...location, street_line_two: e.target.value})}
               />
             </div>
 
@@ -309,6 +326,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="suburb"
                 type="text"
+                value={location.suburb}
+                onChange={(e) => setLocation({...location, suburb: e.target.value})}
               />
             </div>
 
@@ -321,7 +340,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="townOrCity"
                 type="text"
-                
+                value={location.city}
+                onChange={(e) => setLocation({...location, city: e.target.value})}
               />
             </div>
 
@@ -334,7 +354,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="postalCode"
                 type="text"
-                
+                value={location.zipcode}
+                onChange={(e) => setLocation({...location, zipcode: e.target.value})}
               />
             </div>
 
@@ -343,7 +364,17 @@ const [terms_agreement, setTerms_agreement ] = useState("")
                 Country
                 <span className="text-red-600">*</span>
               </label>
-              <CountrySelect />
+              <select
+                id="salesRep"
+                className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
+                required
+              >
+                  {countries.map((country) => (
+                  <option key={country} value={country}>
+                    {country}
+                  </option>
+            ))}
+              </select>
             </div>
 
             <div>
