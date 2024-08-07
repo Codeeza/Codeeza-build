@@ -91,6 +91,6 @@ const RegisterFormSchema = new Schema(
   }
 );
 
-const Form = models.User || model('RegisterForm', RegisterFormSchema);
+const Form = models.RegisterForm || model('RegisterForm', RegisterFormSchema);
 
 export default Form;
