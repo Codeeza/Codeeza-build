@@ -65,6 +65,9 @@ const RegisterFormSchema = new Schema(
       street: {
         type: String,
       },
+      street_line_two:{
+        type: String
+      },
       suburb: {
         type: String,
       },
@@ -77,9 +80,6 @@ const RegisterFormSchema = new Schema(
       country:{
         type: String
       }
-    },
-    address_line_two:{
-      type: String
     },
     sale_rep_assisted:{
       type: String,
