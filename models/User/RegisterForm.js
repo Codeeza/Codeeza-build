@@ -38,7 +38,8 @@ const RegisterFormSchema = new Schema(
     },
     phone_num: {
       type: String,
-      required: true
+      required: true,
+      unique: true
     },
     nature_of_business: {
       type: String,
