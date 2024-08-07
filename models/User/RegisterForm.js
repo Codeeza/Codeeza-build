@@ -87,7 +87,7 @@ const RegisterFormSchema = new Schema(
     },
     terms_agreement:{
       type: Boolean,
-      default: false,
+      default: true,
       required: true
     }
   },
