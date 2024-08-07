@@ -84,6 +84,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
             autoComplete="off"
             className="p-5 text-slate-500 font-bold space-y-5"
           >
+            {/* Company Name Input */}
             <div className="mt-5">
               <label>
                 Company Name / Account Number{" "}
@@ -99,6 +100,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* vat number Input */}
             <div>
               <label className="">VAT Number</label>
               <input
@@ -110,6 +112,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* ck number Name Input */}
             <div>
               <label className="">CK Number</label>
               <input
@@ -120,7 +123,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 onChange={(e) => setCk_num(e.target.value)}
               />
             </div>
-
+            
+            {/* Username Input */}
             <div>
               <label>
                 Username
@@ -136,6 +140,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               <label className="font-normal">Enter a Unique Username</label>
             </div>
 
+            {/* Password Input */}
             <div>
               <label>
                 Password
@@ -150,6 +155,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* User Email Input */}
             <div>
               <label>
                 User Email
@@ -164,6 +170,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* First Name Input */}
             <div>
               <label>
                 First Name
@@ -178,6 +185,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* Last Name Input */}
             <div>
               <label>
                 Last Name
@@ -192,6 +200,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* Phone Number Input */}
             <div>
               <label>
                 Phone Number
@@ -206,6 +215,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* Nature of Business Option */}
             <div>
               <label>
                 Nature of Business
@@ -231,6 +241,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               </select>
             </div>
 
+            {/* Supplier Option*/}
             <div>
               <label>
                 Who are you currently buying from ?
@@ -253,6 +264,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               </select>
             </div>
 
+            {/*Explain if other supplier option input */}
             <div>
               <p className="flex">
                 <FaLongArrowAltUp className="mt-0.5" /> If "OTHER" then please
@@ -267,6 +279,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* Social Url Input */}
             <div>
               <label>
                 Website or Social Media Page
@@ -285,6 +298,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               </label>
             </div>
 
+            {/* Role at company Input */}
             <div>
               <label>Position held in company</label>
               <input
@@ -296,6 +310,9 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* Location/Address Inputs */}
+
+              {/*Address 1 Input */}
             <div>
               <label>
                 Street Address
@@ -311,6 +328,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* Address 2 Input */}
             <div>
               <label>Address line 2 (Optional)</label>
               <input
@@ -323,6 +341,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* Suburb Input */}
             <div>
               <label>Suburb</label>
               <input
@@ -334,6 +353,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* City Input */}
             <div>
               <label>
                 Town / City
@@ -348,6 +368,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* ZipCode Input */}
             <div>
               <label>
                 Postcode / ZIP
@@ -362,6 +383,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               />
             </div>
 
+            {/* Country Input */}
             <div>
               <label>
                 Country
@@ -381,6 +403,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               </select>
             </div>
 
+            {/* Sales Rep assisted Option */}
             <div>
               <label>
                 The sales rep. that helped you?
@@ -401,6 +424,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               </select>
             </div>
 
+            {/* Terms agreement Input */}
             <div className="flex">
               <div className="mt-0.5 mr-0.5">
                 <input type="checkbox" id="agreeToTandCs"
@@ -420,6 +444,7 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               </p>
             </Link>
 
+            {/* Submit Button */}
             <div className="flex justify-end">
               <button type="submit" className="bg-blue-700 py-3 px-5 text-white font-normal hover:bg-red-600 rounded-sm">
                 REGISTER
