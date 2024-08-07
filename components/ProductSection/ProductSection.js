@@ -18,7 +18,7 @@ const ProductSection = () => {
             <div className="relative group rounded-lg overflow-hidden ">
               <Link href="/headwear/headwear-collection">
                 <Image
-                  src="https://captivity.co.za/wp-content/uploads/2023/09/Apparel-cat-btn-2.svg"
+                  src="https://captivity.co.za/wp-content/uploads/2023/05/Headwear-cat-btn.svg"
                   alt="Headwear"
                   className="block sm:hidden w-full h-auto"
                   width={100}
@@ -43,7 +43,7 @@ const ProductSection = () => {
             <div className="relative group rounded-lg overflow-hidden">
               <Link href="/apparel/apparel-collection">
                 <Image
-                  src="https://captivity.co.za/wp-content/uploads/2023/05/Headwear-cat-btn.svg"
+                  src="https://captivity.co.za/wp-content/uploads/2023/09/Apparel-cat-btn-2.svg"
                   alt="Apparel"
                   className="block sm:hidden w-full h-auto "
                   width={100}

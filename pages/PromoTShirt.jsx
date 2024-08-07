@@ -36,7 +36,7 @@ const PromoTShirt = () => {
           </Link>
         </figure>
         <div className="card-body bg-gray-300 rounded-b hover:shadow-lg">
-          <h2 className="card-title flex justify-center">Promo T-Shirt</h2>
+          <h2 className="card-title flex justify-center font-medium">Promo T-Shirt</h2>
           <div className="rating flex justify-center">
             <input
               type="radio"
