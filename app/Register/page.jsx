@@ -31,7 +31,6 @@ const [location, setLocation ] = useState({
   zipcode: 0,
   country: 0
 })
-const [address_line_two, setAddress_line_two ] = useState("")
 const [sale_rep_assisted, setSale_rep_assisted ] = useState("")
 const [terms_agreement, setTerms_agreement ] = useState("")
 
@@ -39,7 +38,7 @@ const [terms_agreement, setTerms_agreement ] = useState("")
   const handleFormSubmit = (e) => {
       e.preventDefault()
       console.log(company_name_OR_acount_num, vat_num, ck_num, user_name, user_email, first_name, last_name, phone_num, nature_of_business, buying_from, specify_other_option, e_links, pos_held_in_comp, 
-        location.street, location.street_line_two, location.suburb)
+        location.street, location.street_line_two, location.suburb, location.country, sale_rep_assisted)
   }
   
   return (
@@ -367,7 +366,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
               <select
                 id="salesRep"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
-                required
+                value={location.country}
+                onChange={(e) => setLocation({...location, country: e.target.value})}
               >
                   {countries.map((country) => (
                   <option key={country} value={country}>
@@ -385,6 +385,8 @@ const [terms_agreement, setTerms_agreement ] = useState("")
               <select
                 id="salesRep"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
+                value={sale_rep_assisted}
+                onChange={(e) => setSale_rep_assisted(e.target.value)}
                 
               >
                 <option value="noOneYet">No one yet</option>
