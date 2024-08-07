@@ -4,13 +4,14 @@ import HowToRegister from "@/components/Register/HowToRegister";
 import BestSeller from "@/components/BestSeller/BestSeller";
 import ProductSection from "@/components/ProductSection/ProductSection";
 import CarouselPlugin from "@/components/Carousel/CarouselPlugin";
+import Carousel from "@/components/SmallCarousel/SmallCarousel";
 export default function Home() {
   return (
     <div>
-    
       <main>
         {" "}
         <CarouselPlugin />
+        <Carousel />
         <ProductSection />
         <BestSeller />
         <CustomContainer />

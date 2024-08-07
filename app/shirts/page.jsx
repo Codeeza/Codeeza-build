@@ -147,7 +147,7 @@ export default function Page() {
               {/* Products Grid */}
               <div className="mb-20">
                 <span className="font-bold ml-5 text-2xl text-gray-400">
-                  Multifunctional headwear
+                  T-Shirts
                 </span>
               </div>
               <div className="grid sm:grid-cols-1 grid-cols-2 lg:grid-cols-4 gap-4">
