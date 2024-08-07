@@ -1,13 +1,17 @@
 "use client";
 
+
+import { useState } from "react";
 import { FaLongArrowAltUp } from "react-icons/fa";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { countries } from "@/lib/CountrySelect";
-import { useState } from "react";
 
-const Register = ({value}) => {
+import { countries } from "@/lib/CountrySelect";
+
+
+const Register = () => {
 
 const [company_name_OR_acount_num, setCompany_name_OR_acount_num ] = useState("")
 const [vat_num, setVat_num ] = useState(0)
@@ -32,13 +36,13 @@ const [location, setLocation ] = useState({
   country: 0
 })
 const [sale_rep_assisted, setSale_rep_assisted ] = useState("")
-const [terms_agreement, setTerms_agreement ] = useState("")
+const [terms_agreement, setTerms_agreement ] = useState(true)
 
 
   const handleFormSubmit = (e) => {
       e.preventDefault()
       console.log(company_name_OR_acount_num, vat_num, ck_num, user_name, user_email, first_name, last_name, phone_num, nature_of_business, buying_from, specify_other_option, e_links, pos_held_in_comp, 
-        location.street, location.street_line_two, location.suburb, location.country, sale_rep_assisted)
+        location.street, location.street_line_two, location.suburb, location.country, sale_rep_assisted, terms_agreement)
   }
   
   return (
@@ -399,7 +403,10 @@ const [terms_agreement, setTerms_agreement ] = useState("")
 
             <div className="flex">
               <div className="mt-0.5 mr-0.5">
-                <input type="checkbox" id="agreeToTandCs" />
+                <input type="checkbox" id="agreeToTandCs"
+                  value={terms_agreement}
+                  onChange={(e) => setTerms_agreement(e.target.value)} 
+                  />
               </div>
               <label>
                 I agree to the Terms & Conditions
