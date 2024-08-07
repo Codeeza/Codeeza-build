@@ -5,12 +5,39 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CountrySelect from "@/components/CountrySelect/CountrySelect";
+import { useState } from "react";
 
 const Register = () => {
 
+const [company_name_OR_acount_num, setCompany_name_OR_acount_num ] = useState("")
+const [vat_num, setVat_num ] = useState(0)
+const [ck_num, setCk_num ] = useState("")
+const [user_name, setUser_name ] = useState("")
+const [user_pass, setUser_pass ] = useState("")
+const [user_email, setUser_email] = useState("")
+const [first_name, setFirst_name ] = useState("")
+const [last_name, setLast_name ] = useState("")
+const [phone_num, setPhone_num ] = useState("")
+const [nature_of_business, setNature_of_business ] = useState("")
+const [buying_from, setBuying_from ] = useState("")
+const [specify_other_option, setSpecify_other_option ] = useState("")
+const [e_links, setE_links ] = useState("")
+const [pos_held_in_comp, setPos_held_in_comp ] = useState("")
+const [location, setLocation ] = useState({
+  street: "",
+  suburb: "",
+  city: "",
+  zipcode: 0,
+  country: 0
+})
+const [address_line_two, setAddress_line_two ] = useState("")
+const [sale_rep_assisted, setSale_rep_assisted ] = useState("")
+const [terms_agreement, setTerms_agreement ] = useState("")
+
+
   const handleFormSubmit = (e) => {
       e.preventDefault()
-      console.log("Hoekom Lees jy my code")
+      console.log(company_name_OR_acount_num, vat_num, ck_num, user_name)
   }
   
   return (
@@ -38,6 +65,7 @@ const Register = () => {
           alt="Registration Form"
           width={1827}
           height={243}
+          priority
         />
 
         <h3 className="ml-10 my-5 text-slate-500 font-semibold text-xl">
@@ -60,7 +88,9 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="companyNameOrAccountNumber"
                 type="text"
-                required
+                value={company_name_OR_acount_num}
+                onChange={(e) => setCompany_name_OR_acount_num(e.target.value)}
+                
               />
             </div>
 
@@ -69,7 +99,9 @@ const Register = () => {
               <input
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="vatNumber"
-                type="text"
+                type="number"
+                value={vat_num}
+                onChange={(e) => setVat_num(e.target.value)}
               />
             </div>
 
@@ -79,6 +111,8 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="vatNumber"
                 type="text"
+                value={ck_num}
+                onChange={(e) => setCk_num(e.target.value)}
               />
             </div>
 
@@ -91,7 +125,8 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="username"
                 type="text"
-                required
+                value={user_name}
+                onChange={(e) => setUser_name(e.target.value)}
               />
               <label className="font-normal">Enter a Unique Username</label>
             </div>
@@ -105,7 +140,8 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="password"
                 type="password"
-                required
+                value={user_pass}
+                onChange={(e) => setUser_pass(e.target.value)}
               />
             </div>
 
@@ -118,7 +154,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="userEmail"
                 type="email"
-                required
+                
               />
             </div>
 
@@ -131,7 +167,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="firstName"
                 type="text"
-                required
+                
               />
             </div>
 
@@ -144,7 +180,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="lastName"
                 type="text"
-                required
+                
               />
             </div>
 
@@ -157,7 +193,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="phoneNumber"
                 type="tel"
-                required
+                
               />
             </div>
 
@@ -169,7 +205,7 @@ const Register = () => {
               <select
                 id="natureOfBusiness"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
-                required
+                
               >
                 <option value="promotional">Promotional</option>
                 <option value="brandingAndPrint">Branding & Print</option>
@@ -193,7 +229,7 @@ const Register = () => {
               <select
                 id="whoYouBuyingFrom"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
-                required
+                
               >
                 <option value="none">None</option>
                 <option value="kevro">KEVRO</option>
@@ -226,7 +262,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="webOrSocial"
                 type="url"
-                required
+                
                 placeholder="www.yourcompany.com"
               />
               <label className="font-normal">
@@ -252,7 +288,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="address1"
                 type="text"
-                required
+                
                 placeholder="House number and street name"
               />
             </div>
@@ -285,7 +321,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="townOrCity"
                 type="text"
-                required
+                
               />
             </div>
 
@@ -298,7 +334,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="postalCode"
                 type="text"
-                required
+                
               />
             </div>
 
@@ -318,7 +354,7 @@ const Register = () => {
               <select
                 id="salesRep"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
-                required
+                
               >
                 <option value="noOneYet">No one yet</option>
                 <option value="bonitaCPT">Bonita - Cape Town</option>
@@ -345,7 +381,7 @@ const Register = () => {
             </Link>
 
             <div className="flex justify-end">
-              <button className="bg-blue-700 py-3 px-5 text-white font-normal hover:bg-red-600 rounded-sm">
+              <button type="submit" className="bg-blue-700 py-3 px-5 text-white font-normal hover:bg-red-600 rounded-sm">
                 REGISTER
               </button>
             </div>
