@@ -66,7 +66,7 @@ const ProductSection = () => {
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4 p-2">
             <div className="relative group rounded-lg overflow-hidden">
-              <Link href="/shirts/just-t-shirts">
+              <Link href="/shirts">
                 <Image
                   src="https://captivity.co.za/wp-content/uploads/2023/09/T-Shirts-cat-btn.svg"
                   alt="T-Shirts"
