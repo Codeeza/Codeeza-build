@@ -3,7 +3,7 @@ import connectDB from "@/config/database"
 
 export const POST = async (request) => {
     try {
-        connectDB()
+       await connectDB()
 
         const formData = await request.formData()
 
@@ -28,7 +28,7 @@ export const POST = async (request) => {
                 street_line_two: formData.get("location.street_line_two"),
                 suburb: formData.get("location.suburb"),
                 city: formData.get("location.city"),
-                zipcode: formData.get("location.zipcode"),
+                zipcode: formData.get("location.zipcode" || 0),
                 country: formData.get("location.country"),
             },
             sale_rep_assisted: formData.get("sale_rep_assisted"),

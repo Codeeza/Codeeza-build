@@ -11,15 +11,15 @@ import { countries } from "@/lib/CountrySelect";
 
 const Register = () => {
     const [fields, setFields] = useState({
-      company_name_OR_acount_num: "company name",
+      company_name_OR_acount_num: "companyName",
       vat_num: 127478939237,
       ck_num: "284904/4990884/3939",
-      user_name: "User Name",
-      user_pass: "User Password",
+      user_name: "UserName",
+      user_pass: "UserPassword",
       user_email: "jt@email.com",
-      first_name: "First Name",
-      last_name: "Last Name",
-      phone_num: "Phone Number",
+      first_name: "FirstName",
+      last_name: "LastName",
+      phone_num: "PhoneNumber",
       nature_of_business: "",
       buying_from: "",
       specify_other_option: "",
@@ -36,11 +36,6 @@ const Register = () => {
       sale_rep_assisted: "Bonita  - Cape Town",
       terms_agreement : true
     })
-
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      console.log(fields)
-    }
 
   const [mounted, setMounted] = useState(false)
 
@@ -85,10 +80,8 @@ const Register = () => {
 
           {mounted && (
             <form
-            action='/api/register'
-            method='POST'
-              onSubmit={handleSubmit}
-              autoComplete="off"
+              action='/api/register'
+              method='POST'
               className="p-5 text-slate-500 font-bold space-y-5"
           >
             {/* Company Name Input */}
@@ -100,6 +93,7 @@ const Register = () => {
               <input
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="companyNameOrAccountNumber"
+                name="company_name_OR_acount_num"
                 type="text"
                 value={fields.company_name_OR_acount_num}
                 onChange={(e) => setFields({...fields, company_name_OR_acount_num:e.target.value})}
@@ -113,6 +107,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="vatNumber"
                 type="number"
+                name="vat_num"
                 value={fields.vat_num}
                 onChange={(e) => setFields({...fields, vat_num:e.target.value})}
               />
@@ -125,6 +120,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="vatNumber"
                 type="text"
+                name="ck_num"
                 value={fields.ck_num}
                 onChange={(e) => setFields({...fields, ck_num:e.target.value})}
               />
@@ -140,6 +136,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="username"
                 type="text"
+                name="user_name"
                 value={fields.user_name}
                 onChange={(e) => setFields({...fields, user_name:e.target.value})}
               />
@@ -156,6 +153,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="password"
                 type="password"
+                name="user_pass"
                 value={fields.user_pass}
                 onChange={(e) => setFields({...fields, user_pass:e.target.value})}
               />
@@ -171,6 +169,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="userEmail"
                 type="email"
+                name="user_email"
                 value={fields.user_email}
                 onChange={(e) => setFields({...fields, user_email:e.target.value})}
               />
@@ -186,6 +185,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="firstName"
                 type="text"
+                name="first_name"
                 value={fields.first_name}
                 onChange={(e) => setFields({...fields, first_name:e.target.value})}
               />
@@ -201,6 +201,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="lastName"
                 type="text"
+                name="last_name"
                 value={fields.last_name}
                 onChange={(e) => setFields({...fields, last_name:e.target.value})}
               />
@@ -216,6 +217,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="phoneNumber"
                 type="tel"
+                name="phone_num"
                 value={fields.phone_num}
                 onChange={(e) => setFields({...fields, phone_num:e.target.value})}
               />
@@ -230,6 +232,7 @@ const Register = () => {
               <select
                 id="natureOfBusiness"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
+                name="nature_of_business"
                 value={fields.nature_of_business}
                 onChange={(e) => setFields({...fields, nature_of_business:e.target.value})}
               >
@@ -256,6 +259,7 @@ const Register = () => {
               <select
                 id="whoYouBuyingFrom"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
+                name="buying_from"
                 value={fields.buying_from}
                 onChange={(e) => setFields({...fields, buying_from: e.target.value})}
                 
@@ -280,6 +284,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="ifOther"
                 type="text"
+                name="specify_other_option"
                 value={fields.specify_other_option}
                 onChange={(e) => setFields({...fields, last_name:e.target.value})}
               />
@@ -296,6 +301,7 @@ const Register = () => {
                 id="webOrSocial"
                 type="url"
                 placeholder="www.yourcompany.com"
+                name="e_links"
                 value={fields.e_links}
                 onChange={(e) => setFields({...fields, e_links:e.target.value})}
               />
@@ -311,6 +317,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="posInComp"
                 type="text"
+                name="pos_held_in_comp"
                 value={fields.pos_held_in_comp}
                 onChange={(e) => setFields({...fields, pos_held_in_comp:e.target.value})}
               />
@@ -329,6 +336,7 @@ const Register = () => {
                 id="address1"
                 type="text"
                 placeholder="House number and street name"
+                name="street"
                 value={fields.location.street}
                 onChange={(e) => setFields({...fields.location, street: e.target.value})}
               />
@@ -341,6 +349,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="address2"
                 type="text"
+                name="street_line_two"
                 placeholder="Apartment, suit, unit, etc."
                 value={fields.location.street_line_two}
                 onChange={(e) => setFields({...fields.location, street_line_two: e.target.value})}
@@ -354,6 +363,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="suburb"
                 type="text"
+                name="suburb"
                 value={fields.location.suburb}
                 onChange={(e) => setFields({...fields.location, suburb: e.target.value})}
               />
@@ -369,6 +379,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="townOrCity"
                 type="text"
+                name="city"
                 value={fields.location.city}
                 onChange={(e) => setFields({...fields.location, city: e.target.value})}
               />
@@ -384,6 +395,7 @@ const Register = () => {
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="postalCode"
                 type="text"
+                name="zipcode"
                 value={fields.location.zipcode}
                 onChange={(e) => setFields({...fields.location, zipcode: e.target.value})}
               />
@@ -398,6 +410,7 @@ const Register = () => {
               <select
                 id="salesRep"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
+                name="country"
                 value={fields.location.country}
                 onChange={(e) => setFields({...fields.location, country: e.target.value})}
               >
@@ -418,6 +431,7 @@ const Register = () => {
               <select
                 id="salesRep"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
+                name="sale_rep_assisted"
                 value={fields.sale_rep_assisted}
                 onChange={(e) => setFields({...fields, sale_rep_assisted: e.target.value})}
                 
@@ -434,6 +448,7 @@ const Register = () => {
             <div className="flex">
               <div className="mt-0.5 mr-0.5">
                 <input type="checkbox" id="agreeToTandCs"
+                  name="terms_agreement"
                   value={fields.terms_agreement}
                   onChange={(e) => setFields({...fields, terms_agreement: e.target.value})}
                   />

@@ -4,91 +4,94 @@ const RegisterFormSchema = new Schema(
   {
     company_name_OR_acount_num: {
       type: String,
-      // required: true
+      required: true
     },
     vat_num: {
       type: Number,
-      // required: true
+      required: true
     },
     ck_num: {
       type: Number,
-      // required: true
+      required: true
     },
     user_name: {
         type: String,
-        // required: true,
+        required: true,
         unique: true
       },
     user_pass: {
         type: String,
-        // required: true
+        required: true
     },
     user_email: {
       type: String,
       unique: true,
-      // required: true
+      required: true
     },
     first_name:{
       type: String,
-      // required: true,
+      required: true,
     },
     last_name:{
       type: String,
-      // required: true,
+      required: true,
     },
     phone_num: {
       type: String,
-      // required: true,
+      required: true,
       unique: true
     },
     nature_of_business: {
       type: String,
-      // required: true
+      required: true
     },
     buying_from: {
       type: String,
-      // required: true
+      required: true
     },
     specify_other_option:{
       type: String,
-      // required: true
     },
     e_links:{
       type: String,
-      // required: true
     },
     pos_held_in_comp:{
       type: String,
-      // required: true
+      required: true
     },
     location: {
-      street: {
-        type: String,
-      },
-      street_line_two:{
-        type: String
-      },
-      suburb: {
-        type: String,
-      },
-      city: {
-        type: String,
-      },
-      zipcode: {
-        type: String,
-      },
-      country:{
-        type: String
-      }
+        street: {
+          type: String,
+          required: true
+        },
+        street_line_two:{
+          type: String,
+          required: true
+        },
+        suburb: {
+          type: String,
+          required: true
+        },
+        city: {
+          type: String,
+          required: true
+        },
+        zipcode: {
+          type: String,
+          required: true
+        },
+        country:{
+          type: String,
+          required: true
+        }
     },
     sale_rep_assisted:{
       type: String,
-      // required: true
+      required: true
     },
     terms_agreement:{
       type: Boolean,
       default: true,
-      // required: true
     }
   },
   {
