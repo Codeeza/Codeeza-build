@@ -5,102 +5,154 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const products = [
-  {
-    id: 1,
-    title: "Ice Beanie",
-    image: "/ice-beanie-dusty-pink-.jpg",
-    image2: "/ice-beanie-burnt-orange-.jpg",
-    rating: 4.5,
-    price: "R29.99",
-    status: "new", // 'soldout' or 'new'
-  },
-  {
-    id: 2,
-    title: "Original Trucker Camo",
-    image: "/Original-Trucker-Camo-model-1.jpeg",
-    image2: "/Original-Trucker-Camo-Green-Foc1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "",
-  },
-  {
-    id: 3,
-    title: "American Two Tone Cap",
-    image: "/American-Two-Tone-Grey-Melange-Navy-Foc1.jpg",
-    image2: "/American-Two-Tone-Grey-Melange-Black-Soc1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "soldout",
-  },
-  {
-    id: 5,
-    title: "Venture Hat Royal Boc",
-    image: "/Venture-Hat-model-scaled.webp",
-    image2: "/Venture-Hat-Royal-Boc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "",
-  },
-  {
-    id: 6,
-    title: "Savannah Hat Dark Khaki",
-    image: "/Savannah-Hat-model.jpg",
-    image2: "/Savannah-Hat-Dark-Khaki-foc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 7,
-    title: "Supafit Red",
-    image2: "/Supafit-Red-Foc.jpg",
-    image: "/Supafit-new-model.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 8,
-    title: "Harlem Bucket",
-    image: "/Harlem-Bucket-model(1).jpg",
-    image2: "/Harlem-Bucket-Hat-Charcoal-1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "soldout",
-  },
-  {
-    id: 9,
-    title: "Linen lilac",
-    image: "/Linen-model.jpg",
-    image2: "/Linen-lilac-Foc1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 10,
-    title: "Camper Trucker",
-    image: "/Camper-Trucker-model.jpg",
-    image2: "/Camper-Trucker-Raspberry-Khaki-Foc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 11,
-    title: "Barista Apron",
-    image: "/Barista-Apron-model.jpg",
-    image2: "/Barista-Apron-Black1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  // Add more products as needed
-];
-
-export default function Home() {
+export default function Page() {
   const [hoveredProductId, setHoveredProductId] = useState(null);
+  const [products, setProducts] = useState([
+    {
+      id: 1,
+      title: "Ice Beanie",
+      image: "/ice-beanie-dusty-pink-.jpg",
+      image2: "/ice-beanie-burnt-orange-.jpg",
+      rating: 4.5,
+      price: 29.99,
+      status: "new", // 'soldout' or 'new'
+    },
+    {
+      id: 2,
+      title: "Original Trucker Camo",
+      image: "/Original-Trucker-Camo-model-1.jpeg",
+      image2: "/Original-Trucker-Camo-Green-Foc1.jpg",
+      rating: 4.0,
+      price: "R25.99",
+      status: "",
+    },
+    {
+      id: 3,
+      title: "American Two Tone Cap",
+      image: "/American-Two-Tone-Grey-Melange-Navy-Foc1.jpg",
+      image2: "/American-Two-Tone-Grey-Melange-Black-Soc1.jpg",
+      rating: 4.0,
+      price: "R25.99",
+      status: "soldout",
+    },
+    {
+      id: 5,
+      title: "Venture Hat Royal Boc",
+      image: "/Venture-Hat-model-scaled.webp",
+      image2: "/Venture-Hat-Royal-Boc.jpg",
+      rating: 4.0,
+      price: "R25.99",
+      status: "",
+    },
+    {
+      id: 6,
+      title: "Savannah Hat Dark Khaki",
+      image: "/Savannah-Hat-model.jpg",
+      image2: "/Savannah-Hat-Dark-Khaki-foc.jpg",
+      rating: 4.0,
+      price: "R25.99",
+      status: " ",
+    },
+    {
+      id: 7,
+      title: "Supafit Red",
+      image2: "/Supafit-Red-Foc.jpg",
+      image: "/Supafit-new-model.jpg",
+      rating: 4.0,
+      price: "R2.99",
+      status: " ",
+    },
+    {
+      id: 8,
+      title: "Harlem Bucket",
+      image: "/Harlem-Bucket-model(1).jpg",
+      image2: "/Harlem-Bucket-Hat-Charcoal-1.jpg",
+      rating: 4.0,
+      price: "R250.99",
+      status: "",
+    },
+    {
+      id: 9,
+      title: "Linen lilac",
+      image: "/Linen-model.jpg",
+      image2: "/Linen-lilac-Foc1.jpg",
+      rating: 3.0,
+      price: "R2500.99",
+      status: " ",
+    },
+    {
+      id: 10,
+      title: "Camper Trucker",
+      image: "/Camper-Trucker-model.jpg",
+      image2: "/Camper-Trucker-Raspberry-Khaki-Foc.jpg",
+      rating: 5.0,
+      price: "R50.99",
+      status: " ",
+    },
+    {
+      id: 11,
+      title: "Barista Apron",
+      image: "/Barista-Apron-model.jpg",
+      image2: "/Barista-Apron-Black1.jpg",
+      rating: 2.0,
+      price: "R25.99",
+      status: " ",
+    },
+    {
+      id: 12,
+      title: "Harlem Bucket",
+      image: "/Harlem-Bucket-model(1).jpg",
+      image2: "/Harlem-Bucket-Hat-Charcoal-1.jpg",
+      rating: 2.0,
+      price: "R25.99",
+      status: "",
+    },
+    {
+      id: 13,
+      title: "Savannah Hat Dark Khaki",
+      image: "/Savannah-Hat-model.jpg",
+      image2: "/Savannah-Hat-Dark-Khaki-foc.jpg",
+      rating: 1.0,
+      price: "R25.99",
+      status: " ",
+    },
+    {
+      id: 14,
+      title: "Camper Trucker",
+      image: "/Camper-Trucker-model.jpg",
+      image2: "/Camper-Trucker-Raspberry-Khaki-Foc.jpg",
+      rating: 3.0,
+      price: "R25.99",
+      status: " ",
+    },
+    // Add more products as needed
+  ]);
+  const handleSortChange = (sortValue) => {
+    let sortedProducts = [...products];
+
+    switch (sortValue) {
+      case "popularity":
+        sortedProducts.sort((a, b) => b.popularity - a.popularity);
+        break;
+      case "rating":
+        sortedProducts.sort((a, b) => b.rating - a.rating);
+        break;
+      case "latest":
+        // Assuming latest means newest items, here we just sort by ID for simplicity
+        sortedProducts.sort((a, b) => b.id - a.id);
+        break;
+      case "priceLowToHigh":
+        sortedProducts.sort((a, b) => a.price - b.price);
+        break;
+      case "priceHighToLow":
+        sortedProducts.sort((a, b) => b.price - a.price);
+        break;
+      default:
+        break;
+    }
+
+    setProducts(sortedProducts);
+  };
 
   function handleMouseEnter(productId) {
     setHoveredProductId(productId);
@@ -114,16 +166,17 @@ export default function Home() {
       <div className="w-full">
         <div className="relative group overflow-hidden">
           <Image
-            src="/Headwear-collection-Header.jpg"
+            src="/Leisure-collection-Header.jpg"
             width={1368}
             height={262}
             alt="Headwear-collection-Header"
-            className="w-full h-[200px] sm:h-[300px] filter brightness-75"
+            className="w-full h-[200px] sm:h-[300px] object-top filter brightness-75"
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute top-20 sm:top-5  md:top-20 lg:top-24 w-full font-bold bg-opacity-50 text-white text-center px-4">
-            <span className="text-5xl sm:flex-wrap sm:text-5xl md:text-5xl lg:text-7xl">
-              <span className="text-red-500">HEADWEAR</span> COLLECTION
+          <div class="absolute inset-0 bg-gradient-to-r  from-gray-500 mix-blend-multiply opacity-50"></div>
+          <div className="absolute top-20 sm:top-5 md:top-20 lg:top-24 w-full font-bold bg-opacity-50 text-white text-center px-4">
+            <span className="text-5xl sm:flex-wrap sm:text-4xl md:text-5xl lg:text-7xl">
+              <span className="text-cyan-500">LEISURE</span> COLLECTION
             </span>
           </div>
         </div>
@@ -134,6 +187,7 @@ export default function Home() {
           <div className="flex">
             {/* Side Menu */}
             <div className="space-y-5 md:mr-10 lg:mr-10 xl:mr-10 xl:ml-20 lg:ml-20 md:ml-20">
+              <ProductCarousel />
               <aside className="w-[300px] mb-0 hidden lg:block">
                 <ul className="menu border-2 p-2 text-gray-700">
                   <span className="text-xl font-bold">HEADWEAR</span>
@@ -202,80 +256,14 @@ export default function Home() {
                 </ul>
               </aside>
               <SideMenuDopDown />
-              <ProductCarousel />
             </div>
 
             {/* Main Content */}
             <div className="w-full lg:w-3/4 m-5">
-              <div className="flex flex-wrap mb-10">
-                <Link
-                  className=" hover:bg-red-700 hover:shadow-md transition duration-600 m-2 border-2 px-3 py-3 rounded-full text-white bg-red-500"
-                  href="/collections/all-collections"
-                >
-                  All
-                </Link>
-
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/camo-collection"
-                >
-                  Camo Collection
-                </Link>
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/winter-collection"
-                >
-                  Winter Collection
-                </Link>
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/baseball-collection"
-                >
-                  Baseball Collection
-                </Link>
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/industrial-collection"
-                >
-                  Industrial Collection
-                </Link>
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/fashion-collection"
-                >
-                  Fashion Collection
-                </Link>
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/leisure-collection"
-                >
+              <div className="mb-20">
+                <span className="font-bold ml-5 text-2xl text-gray-400">
                   Leisure Collection
-                </Link>
-
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/sport-collection"
-                >
-                  Sport Collection
-                </Link>
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/signature-collection"
-                >
-                  Signature Collection
-                </Link>
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/kids-collection"
-                >
-                  Kids Collection
-                </Link>
-                <Link
-                  className=" hover:bg-gray-300 hover:shadow-md transition duration-600 text-gray-700 m-2 border-2 p-3 rounded-full bg-gray-100"
-                  href="/collections/african-collection"
-                >
-                  African Collection
-                </Link>
+                </span>
               </div>
 
               {/* Products Grid */}

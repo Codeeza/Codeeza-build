@@ -57,13 +57,13 @@ const Navbar = () => {
             <Link href="/Help" className="hover:text-gray-300">
               <span className="ml-5">Help</span>
             </Link>
-            <div className="md:flex md:flex-nowrap">
+            <div className="md:flex  md:flex-nowrap">
               <input
                 type="text"
                 placeholder="Search for product"
                 className="px-2 w-[150px] py-2 rounded-l-sm bg-white text-black"
               />
-              <button className="bg-red-600 text-lg rounded-r-sm mr-16 text-white px-2 py-2 hover:bg-red-500">
+              <button className="bg-red-600 text-sm rounded-r-sm mr-16 text-white px-2 py-2 hover:bg-red-500">
                 SEARCH
               </button>
             </div>
@@ -132,7 +132,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search for product"
-            className="px-2 w-[150px] py-2 rounded-l-sm text-black border-2"
+            className="px-2 w-[150px] py-2 bg-white rounded-l-sm text-black border-2"
           />
           <button className="bg-red-600 hover:bg-red-500 rounded-r-sm text-white px-2 py-2">
             SEARCH
