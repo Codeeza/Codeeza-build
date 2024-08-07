@@ -139,14 +139,14 @@ const Categories = () => {
           </div>
 
           <div className="relative group">
-            <button className="focus:outline-none block px-10 py-4 text-gray-600 hover:text-gray-400">
+            <Link href="/catalogue" className="focus:outline-none block px-10 py-4 text-gray-600 hover:text-gray-400">
               Catalogue
-            </button>
+            </Link>
           </div>
 
-          <button className="focus:outline-none block px-10 py-4 text-gray-600 hover:text-gray-400">
+          <Link href="/clearance" className="focus:outline-none block px-10 py-4 text-gray-600 hover:text-gray-400">
             CLEARANCE
-          </button>
+          </Link>
         </div>
       </div>
     </div>
