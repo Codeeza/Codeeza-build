@@ -1,6 +1,6 @@
 import { Schema, model, models } from 'mongoose';
 
-const UserSchema = new Schema(
+const RegisterFormSchema = new Schema(
   {
     company_name_OR_acount_num: {
       type: String,
@@ -91,6 +91,6 @@ const UserSchema = new Schema(
   }
 );
 
-const User = models.User || model('User', UserSchema);
+const Form = models.User || model('RegisterForm', RegisterFormSchema);
 
-export default User;
+export default Form;
