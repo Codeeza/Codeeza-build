@@ -78,6 +78,9 @@ const RegisterFormSchema = new Schema(
         type: String
       }
     },
+    address_line_two:{
+      type: String
+    },
     sale_rep_assisted:{
       type: String,
       required: true
