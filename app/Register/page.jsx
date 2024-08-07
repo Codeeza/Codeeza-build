@@ -1,7 +1,5 @@
 "use client";
-
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaLongArrowAltUp } from "react-icons/fa";
 
 import React from "react";
@@ -12,39 +10,44 @@ import { countries } from "@/lib/CountrySelect";
 
 
 const Register = () => {
+    const [fields, setFields] = useState({
+      company_name_OR_acount_num: "company name",
+      vat_num: 127478939237,
+      ck_num: "284904/4990884/3939",
+      user_name: "User Name",
+      user_pass: "User Password",
+      user_email: "jt@email.com",
+      first_name: "First Name",
+      last_name: "Last Name",
+      phone_num: "Phone Number",
+      nature_of_business: "Nature of Bussiness",
+      buying_from: "KEVRO",
+      specify_other_option: "",
+      e_links: "https://github.com/Codeeza/Codeeza-build.git",
+      pos_held_in_comp: "Role at Company",
+      location: {
+        street: "street 1",
+        street_line_two: "street 2",
+        suburb: "suburb",
+        city: "city",
+        zipcode: 7700,
+        country: "Country",
+        sale_rep_assisted: "Bonita  - Cape Town",
+        terms_agreement : true
+      }
+    })
 
-const [company_name_OR_acount_num, setCompany_name_OR_acount_num ] = useState("")
-const [vat_num, setVat_num ] = useState(0)
-const [ck_num, setCk_num ] = useState("")
-const [user_name, setUser_name ] = useState("")
-const [user_pass, setUser_pass ] = useState("")
-const [user_email, setUser_email] = useState("")
-const [first_name, setFirst_name ] = useState("")
-const [last_name, setLast_name ] = useState("")
-const [phone_num, setPhone_num ] = useState("")
-const [nature_of_business, setNature_of_business ] = useState("")
-const [buying_from, setBuying_from ] = useState("")
-const [specify_other_option, setSpecify_other_option ] = useState("")
-const [e_links, setE_links ] = useState("")
-const [pos_held_in_comp, setPos_held_in_comp ] = useState("")
-const [location, setLocation ] = useState({
-  street: "",
-  street_line_two: "",
-  suburb: "",
-  city: "",
-  zipcode: 0,
-  country: 0
-})
-const [sale_rep_assisted, setSale_rep_assisted ] = useState("")
-const [terms_agreement, setTerms_agreement ] = useState(true)
-
-
-  const handleFormSubmit = (e) => {
+    const handleSubmit = (e) => {
       e.preventDefault()
-      console.log(company_name_OR_acount_num, vat_num, ck_num, user_name, user_email, first_name, last_name, phone_num, nature_of_business, buying_from, specify_other_option, e_links, pos_held_in_comp, 
-        location.street, location.street_line_two, location.suburb, location.country, sale_rep_assisted, terms_agreement)
-  }
-  
+      console.log(fields)
+    }
+
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  },[])
+
   return (
     <div>
       <div className="p-12">
@@ -79,10 +82,12 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
         </h3>
 
         <div className="text-sm border m-10 border-slate-500">
-          <form
-            onSubmit={handleFormSubmit}
-            autoComplete="off"
-            className="p-5 text-slate-500 font-bold space-y-5"
+
+          {mounted && (
+            <form
+              onSubmit={handleSubmit}
+              autoComplete="off"
+              className="p-5 text-slate-500 font-bold space-y-5"
           >
             {/* Company Name Input */}
             <div className="mt-5">
@@ -94,9 +99,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="companyNameOrAccountNumber"
                 type="text"
-                value={company_name_OR_acount_num}
-                onChange={(e) => setCompany_name_OR_acount_num(e.target.value)}
-                
+                value={fields.company_name_OR_acount_num}
+                onChange={(e) => setFields({...fields, company_name_OR_acount_num:e.target.value})}
               />
             </div>
 
@@ -107,8 +111,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="vatNumber"
                 type="number"
-                value={vat_num}
-                onChange={(e) => setVat_num(e.target.value)}
+                value={fields.vat_num}
+                onChange={(e) => setFields({...fields, vat_num:e.target.value})}
               />
             </div>
 
@@ -119,8 +123,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="vatNumber"
                 type="text"
-                value={ck_num}
-                onChange={(e) => setCk_num(e.target.value)}
+                value={fields.ck_num}
+                onChange={(e) => setFields({...fields, ck_num:e.target.value})}
               />
             </div>
             
@@ -134,8 +138,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="username"
                 type="text"
-                value={user_name}
-                onChange={(e) => setUser_name(e.target.value)}
+                value={fields.user_name}
+                onChange={(e) => setFields({...fields, user_name:e.target.value})}
               />
               <label className="font-normal">Enter a Unique Username</label>
             </div>
@@ -150,8 +154,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="password"
                 type="password"
-                value={user_pass}
-                onChange={(e) => setUser_pass(e.target.value)}
+                value={fields.user_pass}
+                onChange={(e) => setFields({...fields, user_pass:e.target.value})}
               />
             </div>
 
@@ -165,8 +169,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="userEmail"
                 type="email"
-                value={user_email}
-                onChange={(e) => setUser_email(e.target.value)}
+                value={fields.user_email}
+                onChange={(e) => setFields({...fields, user_email:e.target.value})}
               />
             </div>
 
@@ -180,8 +184,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="firstName"
                 type="text"
-                value={first_name}
-                onChange={(e) => setFirst_name(e.target.value)}
+                value={fields.first_name}
+                onChange={(e) => setFields({...fields, first_name:e.target.value})}
               />
             </div>
 
@@ -195,8 +199,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="lastName"
                 type="text"
-                value={last_name}
-                onChange={(e) => setLast_name(e.target.value)}
+                value={fields.last_name}
+                onChange={(e) => setFields({...fields, last_name:e.target.value})}
               />
             </div>
 
@@ -210,8 +214,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="phoneNumber"
                 type="tel"
-                value={phone_num}
-                onChange={(e) => setPhone_num(e.target.value)}
+                value={fields.phone_num}
+                onChange={(e) => setFields({...fields, phone_num:e.target.value})}
               />
             </div>
 
@@ -224,8 +228,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               <select
                 id="natureOfBusiness"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
-                value={nature_of_business}
-                onChange={(e) => setNature_of_business(e.target.value)}
+                value={fields.nature_of_business}
+                onChange={(e) => setFields({...fields, nature_of_business:e.target.value})}
               >
                 <option value="promotional">Promotional</option>
                 <option value="brandingAndPrint">Branding & Print</option>
@@ -250,8 +254,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               <select
                 id="whoYouBuyingFrom"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
-                value={buying_from}
-                onChange={(e) => setBuying_from(e.target.value)}
+                value={fields.buying_from}
+                onChange={(e) => setFields({...fields, buying_from: e.target.value})}
                 
               >
                 <option value="none">None</option>
@@ -274,8 +278,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="ifOther"
                 type="text"
-                value={specify_other_option}
-                onChange={(e) => setSpecify_other_option(e.target.value)}
+                value={fields.specify_other_option}
+                onChange={(e) => setFields({...fields, last_name:e.target.value})}
               />
             </div>
 
@@ -290,8 +294,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 id="webOrSocial"
                 type="url"
                 placeholder="www.yourcompany.com"
-                value={e_links}
-                onChange={(e) => setE_links(e.target.value)}
+                value={fields.e_links}
+                onChange={(e) => setFields({...fields, e_links:e.target.value})}
               />
               <label className="font-normal">
                 Where would you be reselling our products?
@@ -305,8 +309,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="posInComp"
                 type="text"
-                value={pos_held_in_comp}
-                onChange={(e) => setPos_held_in_comp(e.target.value)}
+                value={fields.pos_held_in_comp}
+                onChange={(e) => setFields({...fields, pos_held_in_comp:e.target.value})}
               />
             </div>
 
@@ -323,8 +327,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 id="address1"
                 type="text"
                 placeholder="House number and street name"
-                value={location.street}
-                onChange={(e) => setLocation({...location, street: e.target.value})}
+                value={fields.location.street}
+                onChange={(e) => setFields({...fields.location, street: e.target.value})}
               />
             </div>
 
@@ -336,8 +340,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 id="address2"
                 type="text"
                 placeholder="Apartment, suit, unit, etc."
-                value={location.street_line_two}
-                onChange={(e) => setLocation({...location, street_line_two: e.target.value})}
+                value={fields.location.street_line_two}
+                onChange={(e) => setFields({...fields.location, street_line_two: e.target.value})}
               />
             </div>
 
@@ -348,8 +352,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="suburb"
                 type="text"
-                value={location.suburb}
-                onChange={(e) => setLocation({...location, suburb: e.target.value})}
+                value={fields.location.suburb}
+                onChange={(e) => setFields({...fields.location, suburb: e.target.value})}
               />
             </div>
 
@@ -363,8 +367,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="townOrCity"
                 type="text"
-                value={location.city}
-                onChange={(e) => setLocation({...location, city: e.target.value})}
+                value={fields.location.city}
+                onChange={(e) => setFields({...fields.location, city: e.target.value})}
               />
             </div>
 
@@ -378,8 +382,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border focus:outline-red-500"
                 id="postalCode"
                 type="text"
-                value={location.zipcode}
-                onChange={(e) => setLocation({...location, zipcode: e.target.value})}
+                value={fields.location.zipcode}
+                onChange={(e) => setFields({...fields.location, zipcode: e.target.value})}
               />
             </div>
 
@@ -392,8 +396,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               <select
                 id="salesRep"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
-                value={location.country}
-                onChange={(e) => setLocation({...location, country: e.target.value})}
+                value={fields.location.country}
+                onChange={(e) => setFields({...fields.location, country: e.target.value})}
               >
                   {countries.map((country) => (
                   <option key={country} value={country}>
@@ -412,8 +416,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               <select
                 id="salesRep"
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal"
-                value={sale_rep_assisted}
-                onChange={(e) => setSale_rep_assisted(e.target.value)}
+                value={fields.sale_rep_assisted}
+                onChange={(e) => setFields({...fields, sale_rep_assisted: e.target.value})}
                 
               >
                 <option value="noOneYet">No one yet</option>
@@ -428,8 +432,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
             <div className="flex">
               <div className="mt-0.5 mr-0.5">
                 <input type="checkbox" id="agreeToTandCs"
-                  value={terms_agreement}
-                  onChange={(e) => setTerms_agreement(e.target.value)} 
+                  value={fields.terms_agreement}
+                  onChange={(e) => setFields({...fields, terms_agreement: e.target.value})}
                   />
               </div>
               <label>
@@ -451,6 +455,8 @@ const [terms_agreement, setTerms_agreement ] = useState(true)
               </button>
             </div>
           </form>
+          )}
+          
         </div>
 
         <div className="flex justify-center my-7">
