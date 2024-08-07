@@ -16,7 +16,7 @@ const CustomContainer = () => {
           />
           <Link
             // href="/products/classic-t-shirts"
-            href="/headwear/new-in-headwear"
+            href="/shirts"
             className="absolute bottom-14 right-20 transition-transform duration-300 ease-in-out group-hover:translate-x-10 group-hover:scale-125 bg-red-700 text-white px-7 py-3 rounded font-bold"
           >
             Classic T-Shirts
