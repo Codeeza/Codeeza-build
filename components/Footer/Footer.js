@@ -13,7 +13,7 @@ const Footer = () => {
             <li className="mb-2 flex items-center">
               <FaInstagram className="icons instagram text-white hover:text-gray-500" />
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/fwrdheadwearapparelza/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-2 hover:text-red-600"
