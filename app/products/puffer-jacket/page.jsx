@@ -1,24 +1,3 @@
-<<<<<<< HEAD:app/products/puffer-jacket/page.jsx
-"use client";
-
-import React from "react";
-
-const page = () => {
-  return (
-    <div>
-      <nav className="text-sm text-gray-500">
-        Home / Apparel Collection /{" "}
-        <span className="text-black font-semibold">Alaska Puffer Jacket</span>
-      </nav>
-      <h1 className="text-4xl font-bold text-red-600 mt-4">
-        ALASKA PUFFER JACKET
-      </h1>
-    </div>
-  );
-};
-
-export default page;
-=======
 "use client";
 
 import React from "react";
@@ -48,4 +27,3 @@ const page = () => {
 };
 
 export default page;
->>>>>>> cb3de90 (	modified:   app/products/basic-sweater/page.js):app/products/puffer-jacket/page.js
