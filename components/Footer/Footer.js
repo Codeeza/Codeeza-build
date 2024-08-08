@@ -55,7 +55,9 @@ const Footer = () => {
               <Link href="/Help">Help</Link>
             </li>
             <li className="mb-2 hover:text-red-600">
-            <Link href='https://captivity.co.za/contact/'>Contact Us</Link>
+            {/* <Link href='https://captivity.co.za/contact/'>Contact Us</Link> */}
+            <Link href='/contact'>Contact Us</Link>
+
             </li>
             <li className="mb-2 hover:text-red-600">
               <Link href="/custom-orders">Custom Orders</Link>
