@@ -24,7 +24,7 @@ const Footer = () => {
             <li className="mb-2 flex items-center">
               <FaFacebook className="icons facebook text-white hover:text-gray-500" />
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/CaptivityHeadwearApparel/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-2 hover:text-red-600"
