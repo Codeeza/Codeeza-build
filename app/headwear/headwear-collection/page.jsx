@@ -1,103 +1,104 @@
 "use client";
 import ProductCarousel from "@/components/ProductPageCarousel/ProductCarousel";
 import SideMenuDopDown from "@/components/ProductPageSideMenuDropDown/SideMenuDopDown";
+import { mockProducts } from "@/lib/db";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const products = [
-  {
-    id: 1,
-    title: "Ice Beanie",
-    image: "/ice-beanie-dusty-pink-.jpg",
-    image2: "/ice-beanie-burnt-orange-.jpg",
-    rating: 4.5,
-    price: "R29.99",
-    status: "new", // 'soldout' or 'new'
-  },
-  {
-    id: 2,
-    title: "Original Trucker Camo",
-    image: "/Original-Trucker-Camo-model-1.jpeg",
-    image2: "/Original-Trucker-Camo-Green-Foc1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "",
-  },
-  {
-    id: 3,
-    title: "American Two Tone Cap",
-    image: "/American-Two-Tone-Grey-Melange-Navy-Foc1.jpg",
-    image2: "/American-Two-Tone-Grey-Melange-Black-Soc1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "soldout",
-  },
-  {
-    id: 5,
-    title: "Venture Hat Royal Boc",
-    image: "/Venture-Hat-model-scaled.webp",
-    image2: "/Venture-Hat-Royal-Boc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "",
-  },
-  {
-    id: 6,
-    title: "Savannah Hat Dark Khaki",
-    image: "/Savannah-Hat-model.jpg",
-    image2: "/Savannah-Hat-Dark-Khaki-foc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 7,
-    title: "Supafit Red",
-    image2: "/Supafit-Red-Foc.jpg",
-    image: "/Supafit-new-model.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 8,
-    title: "Harlem Bucket",
-    image: "/Harlem-Bucket-model(1).jpg",
-    image2: "/Harlem-Bucket-Hat-Charcoal-1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: "soldout",
-  },
-  {
-    id: 9,
-    title: "Linen lilac",
-    image: "/Linen-model.jpg",
-    image2: "/Linen-lilac-Foc1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 10,
-    title: "Camper Trucker",
-    image: "/Camper-Trucker-model.jpg",
-    image2: "/Camper-Trucker-Raspberry-Khaki-Foc.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  {
-    id: 11,
-    title: "Barista Apron",
-    image: "/Barista-Apron-model.jpg",
-    image2: "/Barista-Apron-Black1.jpg",
-    rating: 4.0,
-    price: "R25.99",
-    status: " ",
-  },
-  // Add more products as needed
-];
+// const products = [
+//   {
+//     id: 1,
+//     title: "Ice Beanie",
+//     image: "/ice-beanie-dusty-pink-.jpg",
+//     image2: "/ice-beanie-burnt-orange-.jpg",
+//     rating: 4.5,
+//     price: "R29.99",
+//     status: "new", // 'soldout' or 'new'
+//   },
+//   {
+//     id: 2,
+//     title: "Original Trucker Camo",
+//     image: "/Original-Trucker-Camo-model-1.jpeg",
+//     image2: "/Original-Trucker-Camo-Green-Foc1.jpg",
+//     rating: 4.0,
+//     price: "R25.99",
+//     status: "",
+//   },
+//   {
+//     id: 3,
+//     title: "American Two Tone Cap",
+//     image: "/American-Two-Tone-Grey-Melange-Navy-Foc1.jpg",
+//     image2: "/American-Two-Tone-Grey-Melange-Black-Soc1.jpg",
+//     rating: 4.0,
+//     price: "R25.99",
+//     status: "soldout",
+//   },
+//   {
+//     id: 5,
+//     title: "Venture Hat Royal Boc",
+//     image: "/Venture-Hat-model-scaled.webp",
+//     image2: "/Venture-Hat-Royal-Boc.jpg",
+//     rating: 4.0,
+//     price: "R25.99",
+//     status: "",
+//   },
+//   {
+//     id: 6,
+//     title: "Savannah Hat Dark Khaki",
+//     image: "/Savannah-Hat-model.jpg",
+//     image2: "/Savannah-Hat-Dark-Khaki-foc.jpg",
+//     rating: 4.0,
+//     price: "R25.99",
+//     status: " ",
+//   },
+//   {
+//     id: 7,
+//     title: "Supafit Red",
+//     image2: "/Supafit-Red-Foc.jpg",
+//     image: "/Supafit-new-model.jpg",
+//     rating: 4.0,
+//     price: "R25.99",
+//     status: " ",
+//   },
+//   {
+//     id: 8,
+//     title: "Harlem Bucket",
+//     image: "/Harlem-Bucket-model(1).jpg",
+//     image2: "/Harlem-Bucket-Hat-Charcoal-1.jpg",
+//     rating: 4.0,
+//     price: "R25.99",
+//     status: "soldout",
+//   },
+//   {
+//     id: 9,
+//     title: "Linen lilac",
+//     image: "/Linen-model.jpg",
+//     image2: "/Linen-lilac-Foc1.jpg",
+//     rating: 4.0,
+//     price: "R25.99",
+//     status: " ",
+//   },
+//   {
+//     id: 10,
+//     title: "Camper Trucker",
+//     image: "/Camper-Trucker-model.jpg",
+//     image2: "/Camper-Trucker-Raspberry-Khaki-Foc.jpg",
+//     rating: 4.0,
+//     price: "R25.99",
+//     status: " ",
+//   },
+//   {
+//     id: 11,
+//     title: "Barista Apron",
+//     image: "/Barista-Apron-model.jpg",
+//     image2: "/Barista-Apron-Black1.jpg",
+//     rating: 4.0,
+//     price: "R25.99",
+//     status: " ",
+//   },
+//   // Add more products as needed
+// ];
 
 export default function Home() {
   const [hoveredProductId, setHoveredProductId] = useState(null);
@@ -280,47 +281,49 @@ export default function Home() {
 
               {/* Products Grid */}
               <div className="grid sm:grid-cols-1 grid-cols-2 lg:grid-cols-4 gap-4">
-                {products.map((product) => (
-                  <div
-                    key={product.id}
-                    className="card rounded-md bg-gray-200 shadow-sm hover:shadow-xl"
-                  >
-                    <figure>
-                      <Image
-                        src={
-                          hoveredProductId === product.id
-                            ? product.image2
-                            : product.image
-                        }
-                        alt={product.title}
-                        id={product.id}
-                        onMouseEnter={() => handleMouseEnter(product.id)}
-                        onMouseLeave={handleMouseLeave}
-                        width={300}
-                        height={200}
-                      />
-                    </figure>
-                    <div className="card-compact p-2">
-                      <h2 className="card-title text-sm text-black">
-                        {product.title}
-                        {product.status === "new" && (
-                          <div className="absolute top-5 left-5  badge badge-secondary p-2 ml-2">
-                            New
-                          </div>
-                        )}
-                        {product.status === "soldout" && (
-                          <div className="absolute top-5 left-5 badge badge-error p-4 ml-2">
-                            Sold Out
-                          </div>
-                        )}
-                      </h2>
-                      <p className="text-yellow-500">
-                        {"★".repeat(Math.floor(product.rating))}
-                        {product.rating % 1 !== 0 && "★"}
-                      </p>
-                      <p>{product.price}</p>
-                    </div>
-                  </div>
+                {mockProducts.map((product) => (
+                  <Link key={product.id} href={`/products/${product.id}`}>
+                    <div
+                      key={product.id}
+                      className="card rounded-md bg-gray-200 shadow-sm hover:shadow-xl"
+                    >
+                      <figure>
+                        <Image
+                          src={
+                            hoveredProductId === product.id
+                              ? product.image2
+                              : product.image
+                          }
+                          alt={product.title}
+                          id={product.id}
+                          onMouseEnter={() => handleMouseEnter(product.id)}
+                          onMouseLeave={handleMouseLeave}
+                          width={300}
+                          height={200}
+                        />
+                      </figure>
+                      <div className="card-compact p-2">
+                        <h2 className="card-title text-sm text-black">
+                          {product.title}
+                          {product.status === "new" && (
+                            <div className="absolute top-5 left-5  badge badge-secondary p-2 ml-2">
+                              New
+                            </div>
+                          )}
+                          {product.status === "soldout" && (
+                            <div className="absolute top-5 left-5 badge badge-error p-4 ml-2">
+                              Sold Out
+                            </div>
+                          )}
+                        </h2>
+                        <p className="text-yellow-500">
+                          {"★".repeat(Math.floor(product.rating))}
+                          {product.rating % 1 !== 0 && "★"}
+                        </p>
+                        <p>{product.price}</p>
+                      </div>
+                    </div>{" "}
+                  </Link>
                 ))}
               </div>
             </div>
