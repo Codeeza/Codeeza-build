@@ -32,5 +32,10 @@ export const POST = async (request) => {
             sale_rep_assisted: formData.get("sale_rep_assisted"),
             terms_agreement: formData.get("terms_agreement"),
         }
-        return Response.json(UserData)
+        try {
+            const newUser = await Form.create(UserData)
+            return Response.json(JSON.stringify(newUser), {status: 200})
+        } catch (error) {
+            return Response.json('Failed to add user details', { status: 500 })
+        }
 }
