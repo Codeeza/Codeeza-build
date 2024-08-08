@@ -20,8 +20,8 @@ const Register = () => {
       first_name: "FirstName",
       last_name: "LastName",
       phone_num: "PhoneNumber",
-      nature_of_business: "",
-      buying_from: "",
+      nature_of_business: "buyer",
+      buying_from: "seller",
       specify_other_option: "",
       e_links: "https://github.com/Codeeza/Codeeza-build.git",
       pos_held_in_comp: "Role at Company",
@@ -37,11 +37,16 @@ const Register = () => {
       terms_agreement : true
     })
 
-  const [mounted, setMounted] = useState(false)
+   const FormAction = async(formData) => {
+      const res = await fetch("http://localhost:3000/api/register",  {
+          method: "POST",
+          body: formData
+      }  
+    )
+    const data = await res.json()
+    console.log(data)
+   }
 
-  useEffect(() => {
-    setMounted(true)
-  },[])
 
   return (
     <div>
@@ -78,10 +83,8 @@ const Register = () => {
 
         <div className="text-sm border m-10 border-slate-500">
 
-          {mounted && (
             <form
-              action='/api/register'
-              method='POST'
+              action={FormAction}
               className="p-5 text-slate-500 font-bold space-y-5"
           >
             {/* Company Name Input */}
@@ -286,7 +289,7 @@ const Register = () => {
                 type="text"
                 name="specify_other_option"
                 value={fields.specify_other_option}
-                onChange={(e) => setFields({...fields, last_name:e.target.value})}
+                onChange={(e) => setFields({...fields, specify_other_option :e.target.value})}
               />
             </div>
 
@@ -472,7 +475,6 @@ const Register = () => {
               </button>
             </div>
           </form>
-          )}
           
         </div>
 

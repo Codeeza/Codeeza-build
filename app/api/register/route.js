@@ -1,10 +1,8 @@
-import Form from "@/models/User/RegisterForm"
 import connectDB from "@/config/database"
+import Form from "@/models/User/RegisterForm"
+
 
 export const POST = async (request) => {
-    try {
-       await connectDB()
-
         const formData = await request.formData()
 
         const UserData = {
@@ -34,11 +32,5 @@ export const POST = async (request) => {
             sale_rep_assisted: formData.get("sale_rep_assisted"),
             terms_agreement: formData.get("terms_agreement"),
         }
-        
-        const newUser = new Form(UserData)
-        newUser.save()
-        
-    } catch (error) {
-        return new Response('Failed to add property', { status: 500 })
-    }
+        return Response.json(UserData)
 }
