@@ -36,7 +36,7 @@ const RegisterFormSchema = new Schema(
       type: String
     },
     ifOther: {
-      type: String || undefined
+      type: String
     },
     webLink: {
       type: String
@@ -66,7 +66,8 @@ const RegisterFormSchema = new Schema(
       type: String
     },
     termsAgree: {
-      type: String
+      type: Boolean,
+      default: false
     },
   },
   {

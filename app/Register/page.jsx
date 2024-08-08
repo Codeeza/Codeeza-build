@@ -22,7 +22,7 @@ const Register = () => {
     phoneNumber: "0685445888",
     natureOfBussiness: "",
     supplierOption: "",
-    ifOther: "" || undefined,
+    ifOther: undefined,
     webLink: "http://localhost:3000",
     posInComp: "posInComp",
     streetOne: "streetOne",
@@ -40,6 +40,7 @@ const Register = () => {
     console.log(fields)
   }
 
+  
   return (
     <div>
       <div className="p-12">
@@ -77,7 +78,6 @@ const Register = () => {
 
             <form
               onSubmit={handleSubmit}
-              autoComplete="off"
               className="p-5 text-slate-500 font-bold space-y-5"
           >
             {/* Company Name Input */}
@@ -433,8 +433,6 @@ const Register = () => {
                 id="salesRep"
                 name="salesRep"
                 type="text"
-                value={fields.salesRep}
-                    onChange={(e) => setFields({...fields, salesRep: e.target.value})}
                 className="bg-gray-50 w-full px-3 py-2 my-2 text-sm text-gray-700 border font-normal" 
               >
                 <option value="">Select Option</option>
