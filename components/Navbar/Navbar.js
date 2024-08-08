@@ -89,39 +89,23 @@ const Navbar = () => {
                 Headwear Collection
               </Link>
             </li>
-            <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
-              onClick={() => handleNavigation("/collection/apparel")}
-            >
-              Apparel Collection
+            <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
+              <Link href="/collection/apparel">Apparel Collection</Link>
             </li>
-            <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
-              onClick={() => handleNavigation("/collections")}
-            >
-              All Collections
+            <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
+              <Link href="/collections">All Collections</Link>
             </li>
-            <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
-              onClick={() => handleNavigation("/catalogue")}
-            >
-              Catalogue
+            <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
+              <Link href="/catalogue">Catalogue</Link>
             </li>
-            <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
-              onClick={() => handleNavigation("/clearance")}
-            >
-              CLEARANCE
+            <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
+              <Link href="/clearance">CLEARANCE</Link>
             </li>
             <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
               <Link href="/Help">Help</Link>
             </li>
-
-            <li
-              className="px-4 py-2 hover:bg-gray-200 hover:text-red-500"
-              onClick={() => handleNavigation("/register")}
-            >
-              Register
+            <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
+              <Link href="/register">Register</Link>
             </li>
           </ul>
         </div>
