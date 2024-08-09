@@ -149,9 +149,16 @@ const Contact = () => {
             CAPE TOWN
           </div>
         </div>
-        <div className="max-w mx-auto mt-10 mb-5 p-5 bg-gray-100 rounded">
-          <div className="mb-4 mt-4 flex-col md:flex-row flex items-center justify-center">
-            JOHANNESBURG
+        <div>
+          <div className="max-w mx-auto mt-10 mb-5 p-5 bg-gray-100 rounded">
+            <div className="mb-4 mt-4 flex-col md:flex-row flex items-center justify-center">
+              JOHANNESBURG
+            </div>
+          </div>
+          <div>
+            <h1 className="text-2xl font-bold text-center text-red-600 mb-6 mt-5">
+              DISTRIBUTORS
+            </h1>
           </div>
         </div>
         <div className="max-w mx-auto mt-10 mb-5 p-5 bg-gray-100 rounded">
@@ -323,26 +330,25 @@ const Contact = () => {
             </div>
           </form>
         </div>
-  <div className={styles.scrollToTop}>
-  <button
-    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-    aria-label="Scroll to Top"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="w-8 h-8"
-    >
-      <path d="M19 15l-7-7-7 7" />
-    </svg>
-  </button>
-</div>
-
+        <div className={styles.scrollToTop}>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            aria-label="Scroll to Top"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-8 h-8"
+            >
+              <path d="M19 15l-7-7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );
