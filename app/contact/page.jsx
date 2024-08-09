@@ -1,9 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./contact.module.css";
 
 const Contact = () => {
   const [mounted, setMounted] = useState(false);
+  const formRef = useRef(null); // Create a ref for the form section
 
   useEffect(() => {
     setMounted(true);
@@ -123,6 +124,12 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, assistance: value }));
   };
 
+  const scrollToForm = () => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   if (!mounted) {
     return null;
   }
@@ -138,6 +145,11 @@ const Contact = () => {
             <button
               type="button"
               className="bg-red-500 text-white px-4 py-2 rounded-md text-sm"
+              onClick={() => {
+                document
+                  .getElementById("send-us-message")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Send us a message
             </button>
@@ -184,14 +196,19 @@ const Contact = () => {
       </div>
 
       <div>
-        <h1 className="text-2xl font-bold text-center text-red-600 mb-6 mt-5">
+        <h1
+          id="send-us-message"
+          className="text-2xl font-bold text-center text-red-600 mb-5 mt-10"
+        >
           SEND US A MESSAGE
         </h1>
       </div>
+
       <div className="relative">
-        {" "}
-        {/* Added relative positioning */}
-        <div className="max-w-[840px] mx-auto mt-3 mb-10 p-5 bg-gray-100 rounded">
+        <div
+          className="max-w-[840px] mx-auto mt-3 mb-10 p-5 bg-gray-100 rounded"
+          ref={formRef} // Attach ref to the form section
+        >
           <form onSubmit={handleSubmit}>
             <div className="mb-4 flex flex-col md:flex-row items-start justify-between">
               <div className="w-full md:w-1/2 md:pl-2 mt-4">
