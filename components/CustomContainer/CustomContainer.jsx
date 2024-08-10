@@ -11,6 +11,7 @@ const CustomContainer = () => {
             src="/ClassicTShirts.jpg"
             alt="Classic T-Shirts"
             fill
+            sizes="max-width"
             style={{ objectFit: "cover" }}
             className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
@@ -27,6 +28,7 @@ const CustomContainer = () => {
             src="/CamperCap.jpg"
             alt="Camper Cap"
             fill
+            sizes="max-width"
             style={{ objectFit: "cover" }}
             className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
