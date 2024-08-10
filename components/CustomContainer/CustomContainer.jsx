@@ -11,7 +11,7 @@ const CustomContainer = () => {
             src="/ClassicTShirts.jpg"
             alt="Classic T-Shirts"
             layout="fill"
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
             className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
           <Link
@@ -27,7 +27,7 @@ const CustomContainer = () => {
             src="/CamperCap.jpg"
             alt="Camper Cap"
             layout="fill"
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
             className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
           <Link
