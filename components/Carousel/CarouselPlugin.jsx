@@ -68,6 +68,7 @@ export default function CarouselPlugin() {
                 alt={image.title}
                 width={1903}
                 height={438}
+                priority
               />
             </Link>
           </div>

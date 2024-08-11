@@ -16,7 +16,7 @@ const ProductSection = () => {
         <div className="flex flex-nowrap items-center justify-center max-w-[950px] ">
           <div className="w-full sm:w-1/2 md:w-1/4 p-2 ">
             <div className="relative group rounded-lg overflow-hidden ">
-              <Link href="/headwear/headwear-collection">
+              <Link href="/headwear/HeadwearCollection">
                 <Image
                   src="https://captivity.co.za/wp-content/uploads/2023/05/Headwear-cat-btn.svg"
                   alt="Headwear"

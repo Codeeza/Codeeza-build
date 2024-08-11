@@ -10,8 +10,9 @@ const CustomContainer = () => {
           <Image
             src="/ClassicTShirts.jpg"
             alt="Classic T-Shirts"
-            layout="fill"
-            objectFit="cover"
+            fill
+            sizes="max-width"
+            style={{ objectFit: "cover" }}
             className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
           <Link
@@ -26,8 +27,9 @@ const CustomContainer = () => {
           <Image
             src="/CamperCap.jpg"
             alt="Camper Cap"
-            layout="fill"
-            objectFit="cover"
+            fill
+            sizes="max-width"
+            style={{ objectFit: "cover" }}
             className="transform transition-transform duration-0 ease-in-out group-hover:scale-125"
           />
           <Link

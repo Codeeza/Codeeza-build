@@ -55,9 +55,7 @@ const Footer = () => {
               <Link href="/Help">Help</Link>
             </li>
             <li className="mb-2 hover:text-red-600">
-            <Link href='https://captivity.co.za/contact/'>Contact Us</Link>
-            {/* <Link href='/contact'>Contact Us</Link> */}
-
+              <Link href="/contact">Contact Us</Link>
             </li>
             <li className="mb-2 hover:text-red-600">
               <Link href="/custom-orders">Custom Orders</Link>
@@ -112,12 +110,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="container mx-auto text-center">
-      <Link href='https://captivity.co.za/contact/'>
-      <button className="bg-transparent border-2 border-slate-400 text-white hover:bg-red-700 hover:border-red-700 py-2 px-4">
-      OUR OFFICES
-    </button>
-      </Link>
-
+        <Link href="https://captivity.co.za/contact/">
+          <button className="bg-transparent border-2 border-slate-400 text-white hover:bg-red-700 hover:border-red-700 py-2 px-4">
+            OUR OFFICES
+          </button>
+        </Link>
       </div>
     </footer>
   );

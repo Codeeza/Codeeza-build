@@ -34,13 +34,13 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <Link href="/">
-            <span className="text-1xl">
+          <Link href="/" className="w-[170px] h-[10px] mb-5">
+            <span>
               <Image
                 src="/captivity-logo-white.png"
                 alt="captivityLogo"
-                width={170}
-                height={10}
+                width={331}
+                height={54}
                 className="flex items-center justify-between md:min-w-40 h-auto "
               />
             </span>
