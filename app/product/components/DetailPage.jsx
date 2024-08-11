@@ -1,73 +1,120 @@
 "use client";
-import Image from "next/image";
-import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProductModal from "./ProductModal";
+import Image from "next/image";
+import Link from "next/link";
+import { countries } from "@/lib/CountrySelect";
 
-const DetailPage = ({ product }) => {
+const ProductPage = ({ product }) => {
+  const [selectedVariant, setSelectedVariant] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    if (product.colorVariants && product.colorVariants.length > 0) {
+      setSelectedVariant(product.colorVariants[0]);
+    }
+  }, [product]);
+
+  const handleVariantChange = (variant) => {
+    setSelectedVariant(variant);
+  };
+
+  // useEffect(() => {
+  //   if (product.imageSelect && product.colorVariants.length > 0) {
+  //     setSelectedImage(product.colorVariants[0]);
+  //   }
+  // }, [product]);
+
+  // const handleImageChange = (image) => {
+  //   setSelectedImage(image);
+  // }
 
   return (
     <div className="p-6">
-      <div className="flex mt-8">
-        <div className="w-1/2">
-          <img src={product.image} alt={product.name} className="w-full" />
-          <div className="flex justify-between mt-4">
-            <button
-              onClick={() => setSelectedColor(product.colors[0].hex)}
-              className="p-2 rounded-full bg-gray-300"
-            >
-              &#8592;
-            </button>
+      <div className="ml-2 sm:ml-28 ">
+        {" "}
+        <h1 className="text-3xl text-red-500 font-bold">{product.name}</h1>
+        <div className="flex items-center  space-x-2 text-sm text-gray-600">
+          <span>Home</span> / <span>Headwear</span> /{" "}
+          <span>{product.name}</span>
+        </div>
+      </div>
+      <div className=" mt-8 flex-wrap sm:flex justify-center">
+        <div className="w-full sm:w-[500px]">
+          {selectedVariant && (
             <Image
-              src="/ice-beanie-burnt-orange-.jpg"
-              alt={product.name}
-              width={40}
-              height={40}
-              className="rounded-md"
+              src={selectedVariant.image}
+              alt={`${product.name} in ${selectedVariant.name}`}
+              width={500}
+              height={500}
+              className="w-full"
             />
-            <button
-              onClick={() => setSelectedColor(product.colors[1].hex)}
-              className="p-2 rounded-full bg-gray-300"
-            >
-              &#8594;
-            </button>
-          </div>
-          <div className="flex mt-4 space-x-2"></div>
-          <div className="mt-4">
-            <button
-              onClick={() => setShowModal(true)}
-              className="w-full p-2 bg-blue-500 text-white rounded"
-            >
+          )}
+
+          {/* <div className="mt-4">
+            <button className="w-full p-2 bg-blue-500 text-white rounded">
               View full image gallery
             </button>
-          </div>
+          </div> */}
         </div>
-        <div className="w-1/2 px-6">
-          <h1 className="text-2xl font-bold">{product.name}</h1>
-          <p className="text-sm text-gray-500">CODE: {product.code}</p>
-          <p className="mt-4 text-lg">{product.description}</p>
-          <ul className="mt-4 list-disc list-inside">
-            <li>145g/m²</li>
-            <li>{product.materials}</li>
 
-            <li>Ribbed crew neck</li>
-            <li>{product.fit}</li>
-            <li>{product.gender}</li>
-          </ul>
-          <p className="mt-4">
-            <strong>Material:</strong> {product.materials}
-          </p>
-          <p className="mt-4 text-sm">
-            <strong>Availability:</strong> {product.stock} in stock
-          </p>
-          <div className="mt-4">
-            <button className="w-full p-2 bg-blue-500 text-white rounded mb-2">
-              Check Stock
-            </button>
-            <button className="w-full p-2 bg-white text-blue-500 border border-blue-500 rounded">
-              Branding Guideline
-            </button>
+        <div className="w-1/2 px-6 text-gray-700">
+          {selectedVariant && (
+            <>
+              <p>
+                <Link
+                  href="/login"
+                  className="font-bold text-red-500 hover:text-gray-700  "
+                >
+                  Login or Register
+                </Link>{" "}
+                to view product prices
+              </p>
+              <p className="mt-2">
+                <strong>Color:</strong> {selectedVariant.name}
+              </p>
+              <div className="flex mt-4 mb-4 ml-5 space-x-2 flex-wrap">
+                {product.colorVariants &&
+                  product.colorVariants.map((variant) => (
+                    <button
+                      key={variant.name}
+                      onClick={() => handleVariantChange(variant)}
+                      className={`w-8 h-8 border-2 p-2 m-1 ${
+                        selectedVariant && selectedVariant.name === variant.name
+                          ? "ring-2 ring-red-500"
+                          : ""
+                      }`}
+                      style={{ backgroundColor: variant.hex }}
+                      aria-label={`Select ${variant.name}`}
+                      title={`${variant.name}`}
+                    ></button>
+                  ))}
+              </div>
+              <p className="text-sm mt-5">
+                {/* CODE: {selectedVariant.code} */}
+                <strong>SIZE</strong>: {selectedVariant.size}
+              </p>
+              {/* <p className="mt-4 text-lg">Price: {selectedVariant.price}</p> */}
+              <p className="mt-2 text-sm mb-4">
+                {selectedVariant.stock} in stock
+              </p>
+            </>
+          )}
+          {/* <p className="mt-4 mb-4 ">{product.description}</p> */}
+          <span className="">
+            <input
+              type="number"
+              className="bg-white mb-2 w-[50px] border-2 border-gray-300"
+            />
+          </span>
+          <div>
+            <Link
+              href="/login"
+              className="w-[200px] p-2 hover:bg-red-700 bg-red-500 text-white rounded mb-2"
+            >
+              login
+            </Link>
           </div>
         </div>
       </div>
@@ -78,4 +125,4 @@ const DetailPage = ({ product }) => {
   );
 };
 
-export default DetailPage;
+export default ProductPage;
