@@ -5,10 +5,16 @@ import { useEffect, useState } from "react";
 
 const images = [
   {
-    src: "/Savannah-Hat-model.jpg",
-    title: "Savannah Hat",
+    src: "/Long-Sleeve-Golfer-Charcoal-gray.jpg",
+    title: "Long Sleeve Golfer",
     rating: 5,
-    link: "/headwear/hats",
+    link: "/apparel/golfers",
+  },
+  {
+    src: "/ice-beanie-burnt-orange-.jpg",
+    title: "Ice Beanie",
+    rating: 4,
+    link: "/headwear/beanies",
   },
   {
     src: "/Alaska-Puffer-Jacket-Black.jpg",
@@ -17,52 +23,28 @@ const images = [
     link: "/headwear/flat-peaks",
   },
   {
-    src: "/model1.jpg",
-    title: "FWRD short 240gm",
-    rating: 4.5,
+    src: "/Linen-model.jpg",
+    title: "Linen Cap",
+    rating: 4,
     link: "/headwear/trucker-caps",
   },
   {
-    src: "/Supafit-new-model.jpg",
-    title: "Supafit NEW",
-    rating: 4.5,
-    link: "/headwear/hats",
+    src: "/Multifuctional-Headwear-SA-Green-Right.jpg",
+    title: "Multifunctional Headwear",
+    rating: 4,
+    link: "/headwear/multifunctional-headwear",
   },
   {
-    src: "/Harlem-Bucket-model.jpg",
-    title: "Harlem Bucket",
-    rating: 4.5,
-    link: "/headwear/hats",
+    src: "/Classic-T-Shirt-Model-2.jpg",
+    title: "Classic T-Shirt",
+    rating: 4,
+    link: "/apparel/t-shirts",
   },
   {
-    src: "/Venture-Hat-model-scaled.webp",
-    title: "Venture Hat",
-    rating: 4.5,
-    link: "/headwear/hats",
-  },
-  {
-    src: "/Frost-Beanie-model.jpg",
-    title: "Frost Beanie",
-    rating: 4.5,
-    link: "/headwear/beanies",
-  },
-  {
-    src: "/Arctic-Body-Warmer-model-scaled.webp",
-    title: "Arctic Body Warmer model scaled",
-    rating: 4.5,
-    link: "/headwear/hats",
-  },
-  {
-    src: "/Drawstrings-Orange.jpg",
-    title: "Drawstrings Orange",
-    rating: 4.5,
-    link: "/headwear/hats",
-  },
-  {
-    src: "/Glacier-Ribbed-model2.jpg",
-    title: "Glacier Ribbed",
-    rating: 4.5,
-    link: "/headwear/beanies",
+    src: "/Basic-crewneck-Sweater_Lilac.jpg",
+    title: "Basic Crew Neck Sweater",
+    rating: 4,
+    link: "/apparel/men",
   },
 ];
 
@@ -127,7 +109,7 @@ export default function ProductCarousel() {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full ${
+              className={`w-5 h-1 rounded-sm ${
                 index === currentIndex ? "bg-red-500" : "bg-gray-300"
               }`}
             />

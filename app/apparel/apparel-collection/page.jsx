@@ -123,7 +123,7 @@ export default function Home() {
               style={{ objectFit: "cover" }}
             />
           </span>
-          <div className="absolute top-20 sm:top-5 md:top-20 lg:top-24 w-full font-bold bg-opacity-50 text-white text-center px-4">
+          <div className="absolute top-20 sm:top-5 md:top-20 lg:top-24 w-full font-bold bg-opacity-50 text-white left-7 px-4">
             <span className="text-5xl sm:flex-wrap sm:text-4xl md:text-5xl lg:text-7xl">
               <span className="text-cyan-500">APPAREL</span> COLLECTION
             </span>

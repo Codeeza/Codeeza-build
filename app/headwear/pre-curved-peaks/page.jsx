@@ -280,7 +280,6 @@ export default function Page() {
           <div className="flex">
             {/* Side Menu */}
             <div className="space-y-5 md:mr-10 lg:mr-10 xl:mr-10 xl:ml-20 lg:ml-20 md:ml-20">
-              <ProductCarousel />
               <aside className="w-[300px] mb-0 hidden lg:block">
                 <ul className="menu border-2 p-2 text-gray-700">
                   <span className="text-xl font-bold">HEADWEAR</span>
@@ -349,6 +348,7 @@ export default function Page() {
                 </ul>
               </aside>
               <SideMenuDopDown />
+              <ProductCarousel />
             </div>
 
             {/* Main Content */}

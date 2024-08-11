@@ -26,7 +26,7 @@ const FlipSection = () => {
               onMouseEnter={() => setIsFlipped(true)}
               onMouseLeave={() => setIsFlipped(false)}
             >
-              <button className="bg-red-600 border-2 border-white text-white hover:bg-black rounded px-6 py-3 absolute mt-3 top-44 left-52">
+              <button className="bg-red-600 border-2 border-white text-white hover:bg-black rounded px-7 py-3 absolute mt-3 top-44 left-52">
                 Take me there
               </button>
               <Image
