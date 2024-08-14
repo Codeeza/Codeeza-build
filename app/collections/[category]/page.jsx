@@ -1,40 +1,23 @@
 "use client";
 import ProductCarousel from "@/components/ProductPageCarousel/ProductCarousel";
 import SideMenuDopDown from "@/components/ProductPageSideMenuDropDown/SideMenuDopDown";
-import SortDropdown from "@/components/SortCardsDropdown/SortDropdown";
+import {
+  allCollectionCategoryMapping,
+  allCollectionMockProducts,
+} from "@/lib/db";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const products = [
-  {
-    id: 1,
-    title: "Boston Hoodie",
-    image: "/Boston-Hoodie-White-moodel.jpg",
-    image2: "/Boston-Hoodie-Charcoal-Melange2.jpg",
-    rating: 5.0,
-    status: "", // 'soldout' or 'new'
-  },
-  {
-    id: 2,
-    title: "Kids Hoodie",
-    image: "/Kids-Hoodie-Red.jpg",
-    image2: "/Kids-Hoodie-Burgundy.jpg",
-    rating: 5.0,
-    status: "",
-  },
-  {
-    id: 3,
-    title: "Base Hoodie",
-    image: "/Base-Hoodie-model.jpg",
-    image2: "/Base-Hoodie-powder-blue.jpg",
-    rating: 5.0,
-    status: "",
-  },
-];
-
-export default function Page() {
+export default function CategoryPage({ params }) {
+  const { category } = params;
   const [hoveredProductId, setHoveredProductId] = useState(null);
+  const { headerImage, products } = allCollectionMockProducts[category] || {};
+  const categoryName = allCollectionCategoryMapping[category];
+
+  if (!products) {
+    return <p>Category not found</p>;
+  }
 
   function handleMouseEnter(productId) {
     setHoveredProductId(productId);
@@ -43,17 +26,25 @@ export default function Page() {
   function handleMouseLeave() {
     setHoveredProductId(null);
   }
+
   return (
     <div>
       <div className="w-full">
         <div className="relative group overflow-hidden">
           <Image
-            src="/cozy-hoodies.png"
-            width={1882}
-            height={391}
-            alt="cozy-hoodies"
+            src={headerImage}
+            width={1368}
+            height={262}
+            alt={`${category} Header`}
+            className="w-full h-[200px] sm:h-[300px] filter brightness-75"
             style={{ objectFit: "cover" }}
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-500 to-cyan-500 mix-blend-multiply opacity-50"></div>
+          <div className="absolute top-20 sm:top-5 md:top-20 lg:top-24 w-full font-bold bg-opacity-50 text-white text-center px-4">
+            <span className="text-5xl sm:flex-wrap sm:text-4xl md:text-5xl lg:text-7xl">
+              <span className="text-white">{categoryName.toUpperCase()}</span>
+            </span>
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-center">
@@ -66,15 +57,13 @@ export default function Page() {
                 <ul className="menu border-2 p-2 text-gray-700">
                   <span className="text-xl font-bold">HEADWEAR</span>
                   <li>
-                    <Link href="/headwear/new-in-headwear">
-                      New in Headwear
-                    </Link>
+                    <Link href="/headwear/newInHeadwear">New in Headwear</Link>
                   </li>
                   <li>
-                    <Link href="/headwear/flat-peaks">Flat Peaks</Link>
+                    <Link href="/headwear/flatPeaks">Flat Peaks</Link>
                   </li>
                   <li>
-                    <Link href="/headwear/pre-curved-peaks">
+                    <Link href="/headwear/preCurvedPeaks">
                       Pre-Curved Peaks
                     </Link>
                   </li>
@@ -82,7 +71,7 @@ export default function Page() {
                     <Link href="/headwear/hats">Hats</Link>
                   </li>
                   <li>
-                    <Link href="/headwear/multifunctional-headwear">
+                    <Link href="/headwear/multifunctionalHeadwear">
                       Multifunctional Headwear
                     </Link>
                   </li>
@@ -90,10 +79,10 @@ export default function Page() {
                     <Link href="/headwear/beanies">Beanies</Link>
                   </li>
                   <li>
-                    <Link href="/headwear/trucker-caps">Trucker Caps</Link>
+                    <Link href="/headwear/truckerCaps">Trucker Caps</Link>
                   </li>
                   <li>
-                    <Link href="/headwear/bucket-hats">Bucket Hats</Link>
+                    <Link href="/headwear/bucketHats">Bucket Hats</Link>
                   </li>
                 </ul>
               </aside>
@@ -135,53 +124,56 @@ export default function Page() {
 
             {/* Main Content */}
             <div className="w-full lg:w-3/4 m-5">
-              {/* Products Grid */}
               <div className="mb-20">
                 <span className="font-bold ml-5 text-2xl text-gray-400">
-                  Hoodies
+                  {categoryName}
                 </span>
               </div>
+
+              {/* Products Grid */}
               <div className="grid sm:grid-cols-1 grid-cols-2 lg:grid-cols-4 gap-4">
                 {products.map((product) => (
                   <div
                     key={product.id}
                     className="card rounded-md bg-gray-200 shadow-sm hover:shadow-xl"
                   >
-                    <figure>
-                      <Image
-                        src={
-                          hoveredProductId === product.id
-                            ? product.image2
-                            : product.image
-                        }
-                        alt={product.title}
-                        id={product.id}
-                        onMouseEnter={() => handleMouseEnter(product.id)}
-                        onMouseLeave={handleMouseLeave}
-                        width={300}
-                        height={200}
-                      />
-                    </figure>
-                    <div className="card-compact p-2">
-                      <h2 className="card-title text-sm text-black">
-                        {product.title}
-                        {product.status === "new" && (
-                          <div className="absolute top-5 left-5  badge badge-secondary p-2 ml-2">
-                            New
-                          </div>
-                        )}
-                        {product.status === "soldout" && (
-                          <div className="absolute top-5 left-5 badge badge-error p-4 ml-2">
-                            Sold Out
-                          </div>
-                        )}
-                      </h2>
-                      <p className="text-yellow-500">
-                        {"★".repeat(Math.floor(product.rating))}
-                        {product.rating % 1 !== 0 && "★"}
-                      </p>
-                      <p>{product.price}</p>
-                    </div>
+                    <Link href={`/product/${product.id}`}>
+                      <figure>
+                        <Image
+                          src={
+                            hoveredProductId === product.id
+                              ? product.image2
+                              : product.image
+                          }
+                          alt={product.title}
+                          id={product.id}
+                          onMouseEnter={() => handleMouseEnter(product.id)}
+                          onMouseLeave={handleMouseLeave}
+                          width={300}
+                          height={200}
+                        />
+                      </figure>
+                      <div className="card-compact p-2">
+                        <h2 className="card-title text-sm text-black">
+                          {product.title}
+                          {product.status === "new" && (
+                            <div className="absolute top-5 left-5  badge badge-secondary p-2 ml-2">
+                              New
+                            </div>
+                          )}
+                          {product.status === "soldout" && (
+                            <div className="absolute top-5 left-5 badge badge-error p-4 ml-2">
+                              Sold Out
+                            </div>
+                          )}
+                        </h2>
+                        <p className="text-yellow-500">
+                          {"★".repeat(Math.floor(product.rating))}
+                          {product.rating % 1 !== 0 && "★"}
+                        </p>
+                        <p>{product.price}</p>
+                      </div>
+                    </Link>
                   </div>
                 ))}
               </div>

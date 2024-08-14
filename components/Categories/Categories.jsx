@@ -48,14 +48,14 @@ const Categories = () => {
           </div>
           <div className="relative group">
             <button className="focus:outline-none flex items-center px-10 py-2 text-gray-600 hover:text-gray-400">
-              <Link href="/apparel/apparel-collection">Apparel Collection</Link>
+              <Link href="/apparel/ApparelCollection">Apparel Collection</Link>
 
               <MdKeyboardArrowDown />
             </button>
             <div className=" z-10 absolute left-0 ml-8 mt-0 w-52 bg-white text-gray-600 rounded shadow-lg hidden group-hover:block">
               <ul>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/apparel/new-in-apparel">NEW in Apparel</Link>
+                  <Link href="/apparel/newInApparel">NEW in Apparel</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
                   <Link href="/apparel/men">Men</Link>
@@ -67,7 +67,7 @@ const Categories = () => {
                   <Link href="/apparel/kids">Kids</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/apparel/t-shirts">T-Shirts</Link>
+                  <Link href="/apparel/tShirts">T-Shirts</Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
                   <Link href="/apparel/golfers">Golfers</Link>
@@ -86,59 +86,61 @@ const Categories = () => {
           </div>
           <div className="relative group">
             <button className="focus:outline-none flex items-center px-10 py-2 text-gray-600 hover:text-gray-400">
-              <Link href="/collections/all-collections">All Collection</Link>
+              <Link href="/collections/signatureCollection">
+                All Collection
+              </Link>
 
               <MdKeyboardArrowDown />
             </button>
             <div className=" z-10 absolute left-0 ml-8  mt-0 w-52 bg-white text-gray-600 rounded shadow-lg hidden group-hover:block">
               <ul>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/signature-collection">
+                  <Link href="/collections/signatureCollection">
                     Signature Collection
                   </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/baseball-collection">
+                  <Link href="/collections/baseballCollection">
                     Baseball Collection
                   </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/fashion-collection">
+                  <Link href="/collections/fashionCollection">
                     Fashion Collection
                   </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/leisure-collection">
+                  <Link href="/collections/leisureCollection">
                     Leisure Collection
                   </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/sport-collection">
+                  <Link href="/collections/sportCollection">
                     Sport Collection
                   </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/industrial-collection">
+                  <Link href="/collections/industrialCollection">
                     Industrial Collection
                   </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/camo-collection">
+                  <Link href="/collections/camoCollection">
                     Camo Collection
                   </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/winter-collection">
+                  <Link href="/collections/winterCollection">
                     Winter Collection
                   </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/kids-collection">
+                  <Link href="/collections/kidsCollection">
                     Kids Collection
                   </Link>
                 </li>
                 <li className="px-4 py-2  hover:text-red-600 hover:bg-gray-200">
-                  <Link href="/collections/african-collection">
+                  <Link href="/collections/africanCollection">
                     African Collection
                   </Link>
                 </li>

@@ -85,15 +85,13 @@ const Navbar = () => {
         <div className="md:hidden bg-white text-black shadow-xl z-10">
           <ul>
             <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
-              <Link href="/headwear/headwear-collection">
-                Headwear Collection
-              </Link>
+              <Link href="/headwear/category">Headwear Collection</Link>
             </li>
             <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
-              <Link href="/collection/apparel">Apparel Collection</Link>
+              <Link href="/apparel/category">Apparel Collection</Link>
             </li>
             <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
-              <Link href="/collections">All Collections</Link>
+              <Link href="/collections/category">All Collections</Link>
             </li>
             <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
               <Link href="/catalogue">Catalogue</Link>
@@ -105,7 +103,7 @@ const Navbar = () => {
               <Link href="/Help">Help</Link>
             </li>
             <li className="px-4 py-2 hover:bg-gray-200 hover:text-red-500">
-              <Link href="/register">Register</Link>
+              <Link href="/Register">Register</Link>
             </li>
           </ul>
         </div>
