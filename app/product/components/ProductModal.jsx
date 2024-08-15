@@ -1,6 +1,6 @@
 const ProductModal = ({ product, setShowModal }) => {
   return (
-    <div className="fixed inset-0 p-5 h-full bg-gray-300 bg-opacity-50 flex justify-center items-center -4">
+    <div className="fixed text-black inset-0 p-5 h-full bg-gray-300 bg-opacity-50 flex justify-center items-center -4">
       <div className=" bg-white m-5 rounded-lg w-full h-auto max-h-[750px] max-w-4xl overflow-scroll p-4 sm:p-6 sm:m-5 mt-5">
         <div className="flex justify-between items-center">
           <h2 className="text-lg sm:text-xl font-bold">
