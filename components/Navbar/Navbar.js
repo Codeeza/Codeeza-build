@@ -73,7 +73,7 @@ const Navbar = () => {
             <div>
               <RxDividerVertical className="-mr-5" />
             </div>
-            <Link href="/register">
+            <Link href="/Register">
               <span className="hover:text-gray-300 -ml-16">Register</span>
             </Link>
           </div>
