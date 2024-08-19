@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const Login = () => {
   return (
-    <div className="w-max m-auto">
+    <div className="md:w-max md:m-auto">
       <div className="mt-3">
         <div className="border-solid border-y-2 border-gray-400 max-w-screen-2xl">
-          <div className="my-10 p-7 max-w-screen-md m-auto bg-gray-100 border-slate-400 rounded-3xl shadow-2xl">
+          <div className="md:my-10 p-7 max-w-screen-md md:m-auto m-5 bg-gray-100 border-slate-400 rounded-3xl shadow-2xl">
             <h2 className="mb-4 text-2xl font-semibold pb-5 text-left text-gray-700">
               Login
             </h2>
@@ -70,18 +70,20 @@ const Login = () => {
           </div>
         </div>
         <div className="border-solid border-b-2 border-gray-400 w-full max-w-screen-lg">
-          <h2 className="py-5 text-2xl font-bold text-left text-gray-500">
+          <h2 className="py-5 text-2xl font-bold md:text-left text-center text-gray-500">
             Trading as a reseller?
           </h2>
+          
           <Link href="/register">
-            {" "}
-            <button
-              className="px-4 py-2 font-bold text-white bg-red-500 rounded-sm hover:bg-red-700 focus:outline-none focus:shadow-outline"
-              type="button"
-            >
-              Register Now
-            </button>
-          </Link>
+          {" "}
+          <button
+            className="md:none block md:ml-0 m-auto px-4 py-2 font-bold text-white bg-red-500 md:rounded-sm rounded-full hover:bg-red-700 focus:outline-none focus:shadow-outline"
+            type="button"
+          >
+            Register Now
+          </button>
+        </Link>
+          
           <Image
             src="/hours-section.png"
             alt="Orders are to be collected 48 hours after payment received."
@@ -89,7 +91,8 @@ const Login = () => {
             height={558}
           />
         </div>
-        <h2 className="py-4 text-sm font-semibold text-left text-gray-700">
+        
+        <h2 className="py-4 md:ml-0 ml-5 text-sm font-semibold text-left text-gray-700">
           POPI Act Disclaimer
           <a
             href="/popi-act-terms"

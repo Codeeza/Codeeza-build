@@ -5,10 +5,9 @@ import BestSeller from "@/components/BestSeller/BestSeller";
 import ProductSection from "@/components/ProductSection/ProductSection";
 import CarouselPlugin from "@/components/Carousel/CarouselPlugin";
 import Carousel from "@/components/SmallCarousel/SmallCarousel";
-import connectDB from "@/config/database";
+import connectDB from "@/config/database"
 
-
-const Home = async() => {
+const Home = async () => {
   return (
     <div>
       <main>
@@ -22,6 +21,6 @@ const Home = async() => {
       </main>
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
