@@ -38,7 +38,7 @@ export default function CategoryPage({ params }) {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-500 to-cyan-500 mix-blend-multiply opacity-50"></div>
           <div className="absolute top-20 sm:top-5 md:top-20 lg:top-24 w-full font-bold bg-opacity-50 text-white text-center px-4">
-            <span className="text-5xl sm:flex-wrap sm:text-4xl md:text-5xl lg:text-7xl">
+            <span className="text-5xl sm:flex-wrap sm:text-4xl md:text-6xl lg:text-7xl">
               <span className="text-cyan-500">
                 {categoryName.toUpperCase()}
               </span>
@@ -52,7 +52,6 @@ export default function CategoryPage({ params }) {
           <div className="flex">
             {/* Side Menu */}
             <div className="space-y-5 md:mr-10 lg:mr-10 xl:mr-10 xl:ml-20 lg:ml-20 md:ml-20">
-
               <aside className="w-[300px] mb-0 hidden lg:block">
                 <ul className="menu border-2 p-2 text-gray-700">
                   <span className="text-xl font-bold">HEADWEAR</span>
@@ -131,7 +130,7 @@ export default function CategoryPage({ params }) {
               </div>
 
               {/* Products Grid */}
-              <div className="grid sm:grid-cols-1 grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-4">
                 {products.map((product) => (
                   <div
                     key={product.id}

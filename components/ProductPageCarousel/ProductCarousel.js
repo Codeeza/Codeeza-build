@@ -60,7 +60,7 @@ export default function ProductCarousel() {
   }, [currentIndex]);
 
   return (
-    <div className="hidden sm:block ">
+    <div className="hidden lg:block">
       <div className="flex flex-col items-center  ">
         <span className="text-xl text-gray-700 font-bold">
           NEW PRODUCTS

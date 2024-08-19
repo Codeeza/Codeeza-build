@@ -79,6 +79,7 @@ export default function Carousel() {
 
   return (
     <div className="flex flex-col items-center md:hidden lg:hidden xl:hidden ">
+     
       <span className="text-8xl font-bold text-gray-200 ">NEW</span>
       <div className="relative w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-gray-200">
         <div

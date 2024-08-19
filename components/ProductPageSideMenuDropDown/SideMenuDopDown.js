@@ -11,7 +11,7 @@ const SideMenuDopDown = () => {
     setOpenCollection(openCollection === collection ? null : collection);
   };
   return (
-    <div className="hidden sm:block">
+    <div className="hidden lg:block">
       <button onClick={() => toggleContent("c1")}>
         <span>
           {openCollection === "c1" ? <FaRegWindowMinimize /> : <SlArrowDown />}
