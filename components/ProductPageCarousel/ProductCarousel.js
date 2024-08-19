@@ -109,7 +109,7 @@ export default function ProductCarousel() {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-5 h-1 rounded-sm ${
+              className={`w-4 h-1 rounded-sm ${
                 index === currentIndex ? "bg-red-500" : "bg-gray-300"
               }`}
             />

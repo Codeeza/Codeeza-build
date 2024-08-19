@@ -80,7 +80,7 @@ export default function CarouselPlugin() {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`h-2 w-2 mx-1 rounded-full ${
+              className={`h-1 w-1 mx-1 rounded-full ${
                 currentIndex === index ? "bg-red-600" : "bg-gray-400"
               }`}
             />

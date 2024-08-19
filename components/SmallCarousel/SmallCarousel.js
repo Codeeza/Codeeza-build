@@ -79,7 +79,6 @@ export default function Carousel() {
 
   return (
     <div className="flex flex-col items-center md:hidden lg:hidden xl:hidden ">
-     
       <span className="text-8xl font-bold text-gray-200 ">NEW</span>
       <div className="relative w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-gray-200">
         <div
@@ -119,7 +118,7 @@ export default function Carousel() {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-3 h-1 rounded-full ${
               index === currentIndex ? "bg-red-500" : "bg-gray-300"
             }`}
           />
