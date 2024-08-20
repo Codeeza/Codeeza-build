@@ -22,7 +22,7 @@ const ProductModal = ({ product, setShowModal }) => {
                   <table className="w-full mt-2 text-sm text-left">
                     <thead>
                       <tr>
-                        <th className="px-2 py-1 border-b">Size</th>
+                        <th className="px-2 py-1 border-b">{variant.size}</th>
                         <th className="px-2 py-1 border-b">Stock on Hand</th>
                         <th className="px-2 py-1 border-b">Reserved</th>
                         <th className="px-2 py-1 border-b">Incoming</th>
